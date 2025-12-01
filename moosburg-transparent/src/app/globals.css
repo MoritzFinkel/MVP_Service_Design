@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Moosburg Transparent Design System */
+  --primary: #0077B6;
+  --primary-dark: #005a8c;
+  --secondary: #CAF0F8;
+  --accent: #FFD166;
+  --accent-dark: #e6b84d;
+  --neutral-light: #F8F9FA;
+  --neutral-dark: #343A40;
+  --neutral-gray: #6c757d;
+  --success: #06D6A0;
+  --warning: #FFD166;
+  --danger: #EF476F;
+  
+  --background: #ffffff;
+  --foreground: #343A40;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+  --color-neutral-light: var(--neutral-light);
+  --color-neutral-dark: var(--neutral-dark);
+  --color-neutral-gray: var(--neutral-gray);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--neutral-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* Card styles */
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Button styles */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--neutral-dark);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.btn-accent:hover {
+  background: var(--accent-dark);
+}
+
+/* Badge styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-success {
+  background: rgba(6, 214, 160, 0.15);
+  color: #059669;
+}
+
+.badge-warning {
+  background: rgba(255, 209, 102, 0.3);
+  color: #92400e;
+}
+
+.badge-danger {
+  background: rgba(239, 71, 111, 0.15);
+  color: #dc2626;
+}
+
+.badge-info {
+  background: rgba(0, 119, 182, 0.15);
+  color: #0077B6;
+}
