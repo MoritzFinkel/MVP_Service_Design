@@ -1,9 +1,15 @@
+#:schema node_modules/wrangler/config-schema.json
 name = "moosburg-transparent"
 main = ".open-next/worker.js"
 compatibility_date = "2025-01-01"
-compatibility_flags = ["nodejs_compat"]
+compatibility_flags = ["nodejs_compat_v2"]
 
-# Cloudflare Pages/Workers Assets
+# Assets configuration
 [assets]
 directory = ".open-next/assets"
 binding = "ASSETS"
+
+# KV namespace for caching (optional but recommended)
+# [[kv_namespaces]]
+# binding = "NEXT_CACHE_WORKERS_KV"
+# id = "<your-kv-namespace-id>"
