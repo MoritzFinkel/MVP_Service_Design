@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 interface FeedbackData {
   // Allgemeine Infos
@@ -208,12 +209,12 @@ export default function FeedbackPage() {
           <p className="text-[var(--neutral-gray)] mb-6">
             Dein Feedback hilft uns, Moosburg Transparent für alle Bürger:innen besser zu machen.
           </p>
-          <a 
+          <Link 
             href="/"
             className="btn-primary inline-block"
           >
             Zurück zur Startseite
-          </a>
+          </Link>
         </div>
       </div>
     );
@@ -319,7 +320,7 @@ export default function FeedbackPage() {
                   </li>
                   <li className="flex gap-3">
                     <span className="bg-[var(--primary)] text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">2</span>
-                    <span><strong>Antrag finden:</strong> Finde den Antrag "Tempo 30 in der Altstadt".</span>
+                    <span><strong>Antrag finden:</strong> Finde den Antrag &quot;Tempo 30 in der Altstadt&quot;.</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="bg-[var(--primary)] text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">3</span>
