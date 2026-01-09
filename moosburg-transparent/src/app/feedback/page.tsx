@@ -15,12 +15,17 @@ interface FeedbackData {
   aufgabe5: string;
   aufgabe6: string;
   
-  // Bewertungen (1-5)
-  uebersichtlichkeit: number;
-  verstaendlichkeit: number;
-  navigation: number;
-  design: number;
-  weiterempfehlung: number;
+  // SUS (System Usability Scale) - 10 Fragen, 1-5
+  sus1: number; // Würde regelmäßig nutzen
+  sus2: number; // Unnötig kompliziert
+  sus3: number; // Einfach zu bedienen
+  sus4: number; // Bräuchte Hilfe
+  sus5: number; // Gut integriert
+  sus6: number; // Zu viele Unstimmigkeiten
+  sus7: number; // Schnell verstehen
+  sus8: number; // Umständlich
+  sus9: number; // Sicher gefühlt
+  sus10: number; // Viel lernen müssen
   
   // Offene Fragen
   gutGefallen: string;
@@ -30,7 +35,7 @@ interface FeedbackData {
 }
 
 // ⚠️ WICHTIG: Ersetze diese ID mit deiner eigenen von https://formspree.io
-const FORMSPREE_ID = "xreezgdy"; // z.B. "xyzabcde"
+const FORMSPREE_ID = "mbddrjvp"; // z.B. "xyzabcde"
 
 export default function FeedbackPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -46,11 +51,16 @@ export default function FeedbackPage() {
     aufgabe4: "",
     aufgabe5: "",
     aufgabe6: "",
-    uebersichtlichkeit: 0,
-    verstaendlichkeit: 0,
-    navigation: 0,
-    design: 0,
-    weiterempfehlung: 0,
+    sus1: 0,
+    sus2: 0,
+    sus3: 0,
+    sus4: 0,
+    sus5: 0,
+    sus6: 0,
+    sus7: 0,
+    sus8: 0,
+    sus9: 0,
+    sus10: 0,
     gutGefallen: "",
     verwirrend: "",
     fehlt: "",
@@ -66,6 +76,17 @@ export default function FeedbackPage() {
     setSubmitError(null);
     
     try {
+      // SUS Score berechnen (0-100)
+      // Ungerade Fragen (1,3,5,7,9): Score - 1
+      // Gerade Fragen (2,4,6,8,10): 5 - Score
+      const susRaw = 
+        (formData.sus1 - 1) + (5 - formData.sus2) +
+        (formData.sus3 - 1) + (5 - formData.sus4) +
+        (formData.sus5 - 1) + (5 - formData.sus6) +
+        (formData.sus7 - 1) + (5 - formData.sus8) +
+        (formData.sus9 - 1) + (5 - formData.sus10);
+      const susScore = susRaw * 2.5;
+
       // Nummerierte Felder für korrekte Reihenfolge in Formspree
       const sortedData = {
         "01_Alter": formData.alter || "Keine Angabe",
@@ -76,15 +97,21 @@ export default function FeedbackPage() {
         "06_Aufgabe4_Filter": formData.aufgabe4 || "Keine Angabe",
         "07_Aufgabe5_Stadtkarte": formData.aufgabe5 || "Keine Angabe",
         "08_Aufgabe6_Buergerabstimmung": formData.aufgabe6 || "Keine Angabe",
-        "09_Bewertung_Uebersichtlichkeit": `${formData.uebersichtlichkeit}/5`,
-        "10_Bewertung_Verstaendlichkeit": `${formData.verstaendlichkeit}/5`,
-        "11_Bewertung_Navigation": `${formData.navigation}/5`,
-        "12_Bewertung_Design": `${formData.design}/5`,
-        "13_Bewertung_Weiterempfehlung": `${formData.weiterempfehlung}/5`,
-        "14_Was_gut_gefallen": formData.gutGefallen || "Keine Angabe",
-        "15_Was_verwirrend": formData.verwirrend || "Keine Angabe",
-        "16_Was_fehlt": formData.fehlt || "Keine Angabe",
-        "17_Sonstiges": formData.sonstiges || "Keine Angabe",
+        "09_SUS01_Regelmaessig_nutzen": `${formData.sus1}/5`,
+        "10_SUS02_Unnoetig_kompliziert": `${formData.sus2}/5`,
+        "11_SUS03_Einfach_bedienen": `${formData.sus3}/5`,
+        "12_SUS04_Hilfe_benoetigt": `${formData.sus4}/5`,
+        "13_SUS05_Gut_integriert": `${formData.sus5}/5`,
+        "14_SUS06_Unstimmigkeiten": `${formData.sus6}/5`,
+        "15_SUS07_Schnell_verstehen": `${formData.sus7}/5`,
+        "16_SUS08_Umstaendlich": `${formData.sus8}/5`,
+        "17_SUS09_Sicher_gefuehlt": `${formData.sus9}/5`,
+        "18_SUS10_Viel_lernen": `${formData.sus10}/5`,
+        "19_SUS_SCORE": `${susScore.toFixed(1)}/100`,
+        "20_Was_gut_gefallen": formData.gutGefallen || "Keine Angabe",
+        "21_Was_verwirrend": formData.verwirrend || "Keine Angabe",
+        "22_Was_fehlt": formData.fehlt || "Keine Angabe",
+        "23_Sonstiges": formData.sonstiges || "Keine Angabe",
         "_subject": "Neues Moosburg Transparent Feedback",
       };
 
@@ -117,23 +144,31 @@ export default function FeedbackPage() {
     { title: "Über dich", icon: "👤" },
     { title: "Aufgaben 1-3", icon: "📋" },
     { title: "Aufgaben 4-6", icon: "📋" },
-    { title: "Bewertung", icon: "⭐" },
+    { title: "SUS 1-5", icon: "📊" },
+    { title: "SUS 6-10", icon: "📊" },
     { title: "Feedback", icon: "💬" },
   ];
 
   const RatingScale = ({ 
     value, 
     onChange, 
-    label 
+    label,
+    isNegative = false
   }: { 
     value: number; 
     onChange: (v: number) => void; 
     label: string;
+    isNegative?: boolean;
   }) => (
-    <div className="mb-6">
-      <label className="block text-sm font-medium text-[var(--neutral-dark)] mb-2">
+    <div className={`mb-6 p-4 rounded-lg ${isNegative ? "bg-orange-50 border border-orange-200" : ""}`}>
+      <label className="block text-sm font-medium text-[var(--neutral-dark)] mb-1">
         {label}
       </label>
+      {isNegative && (
+        <p className="text-xs text-orange-600 mb-2 flex items-center gap-1">
+          ⚠️ Achtung: Negative Aussage – lies genau!
+        </p>
+      )}
       <div className="flex gap-2">
         {[1, 2, 3, 4, 5].map((num) => (
           <button
@@ -142,7 +177,9 @@ export default function FeedbackPage() {
             onClick={() => onChange(num)}
             className={`w-12 h-12 rounded-lg font-bold transition-all ${
               value === num
-                ? "bg-[var(--primary)] text-white scale-110"
+                ? isNegative 
+                  ? "bg-orange-500 text-white scale-110"
+                  : "bg-[var(--primary)] text-white scale-110"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"
             }`}
           >
@@ -151,8 +188,8 @@ export default function FeedbackPage() {
         ))}
       </div>
       <div className="flex justify-between text-xs text-gray-500 mt-1 px-1">
-        <span>Schlecht</span>
-        <span>Super</span>
+        <span>Stimme gar nicht zu</span>
+        <span>Stimme voll zu</span>
       </div>
     </div>
   );
@@ -495,53 +532,108 @@ export default function FeedbackPage() {
             </div>
           )}
 
-          {/* Step 4: Bewertung */}
+          {/* Step 4: SUS Fragen 1-5 */}
           {currentStep === 4 && (
             <div>
               <h2 
-                className="text-xl font-bold text-[var(--neutral-dark)] mb-6"
+                className="text-xl font-bold text-[var(--neutral-dark)] mb-4"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
-                ⭐ Deine Bewertung
+                📊 System Usability Scale (1/2)
               </h2>
-              <p className="text-[var(--neutral-gray)] mb-6">
-                Bewerte die folgenden Aspekte von 1 (schlecht) bis 5 (super):
+              <p className="text-[var(--neutral-gray)] mb-2 text-sm">
+                Bitte bewerte die folgenden Aussagen von 1 (Stimme gar nicht zu) bis 5 (Stimme voll zu).
               </p>
+              <div className="bg-[var(--secondary)] p-3 rounded-lg mb-6">
+                <p className="text-xs text-[var(--primary)]">
+                  💡 Dies ist ein standardisierter Fragebogen zur Messung der Benutzerfreundlichkeit.
+                </p>
+              </div>
 
               <RatingScale
-                value={formData.uebersichtlichkeit}
-                onChange={(v) => updateField("uebersichtlichkeit", v)}
-                label="Wie übersichtlich findest du die Website?"
+                value={formData.sus1}
+                onChange={(v) => updateField("sus1", v)}
+                label="1. Ich würde diese Website gerne regelmäßig nutzen."
               />
 
               <RatingScale
-                value={formData.verstaendlichkeit}
-                onChange={(v) => updateField("verstaendlichkeit", v)}
-                label="Wie verständlich sind die Inhalte?"
+                value={formData.sus2}
+                onChange={(v) => updateField("sus2", v)}
+                label="2. Ich fand die Website unnötig kompliziert."
+                isNegative={true}
               />
 
               <RatingScale
-                value={formData.navigation}
-                onChange={(v) => updateField("navigation", v)}
-                label="Wie einfach war die Navigation?"
+                value={formData.sus3}
+                onChange={(v) => updateField("sus3", v)}
+                label="3. Ich fand die Website einfach zu bedienen."
               />
 
               <RatingScale
-                value={formData.design}
-                onChange={(v) => updateField("design", v)}
-                label="Wie ansprechend ist das Design?"
+                value={formData.sus4}
+                onChange={(v) => updateField("sus4", v)}
+                label="4. Ich bräuchte Hilfe, um die Website nutzen zu können."
+                isNegative={true}
               />
 
               <RatingScale
-                value={formData.weiterempfehlung}
-                onChange={(v) => updateField("weiterempfehlung", v)}
-                label="Würdest du die Website weiterempfehlen?"
+                value={formData.sus5}
+                onChange={(v) => updateField("sus5", v)}
+                label="5. Die verschiedenen Funktionen waren gut integriert."
               />
             </div>
           )}
 
-          {/* Step 5: Offenes Feedback */}
+          {/* Step 5: SUS Fragen 6-10 */}
           {currentStep === 5 && (
+            <div>
+              <h2 
+                className="text-xl font-bold text-[var(--neutral-dark)] mb-4"
+                style={{ fontFamily: 'Poppins, sans-serif' }}
+              >
+                📊 System Usability Scale (2/2)
+              </h2>
+              <p className="text-[var(--neutral-gray)] mb-6 text-sm">
+                Bitte bewerte die folgenden Aussagen von 1 (Stimme gar nicht zu) bis 5 (Stimme voll zu).
+              </p>
+
+              <RatingScale
+                value={formData.sus6}
+                onChange={(v) => updateField("sus6", v)}
+                label="6. Es gab zu viele Unstimmigkeiten auf der Website."
+                isNegative={true}
+              />
+
+              <RatingScale
+                value={formData.sus7}
+                onChange={(v) => updateField("sus7", v)}
+                label="7. Die meisten Menschen würden die Website schnell verstehen."
+              />
+
+              <RatingScale
+                value={formData.sus8}
+                onChange={(v) => updateField("sus8", v)}
+                label="8. Ich fand die Website umständlich zu bedienen."
+                isNegative={true}
+              />
+
+              <RatingScale
+                value={formData.sus9}
+                onChange={(v) => updateField("sus9", v)}
+                label="9. Ich fühlte mich sicher bei der Nutzung der Website."
+              />
+
+              <RatingScale
+                value={formData.sus10}
+                onChange={(v) => updateField("sus10", v)}
+                label="10. Ich musste viel lernen, bevor ich die Website nutzen konnte."
+                isNegative={true}
+              />
+            </div>
+          )}
+
+          {/* Step 6: Offenes Feedback */}
+          {currentStep === 6 && (
             <div>
               <h2 
                 className="text-xl font-bold text-[var(--neutral-dark)] mb-6"
