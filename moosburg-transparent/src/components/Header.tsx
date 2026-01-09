@@ -57,6 +57,12 @@ export default function Header() {
             >
               Über uns
             </Link>
+            <Link 
+              href="/feedback" 
+              className="bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity"
+            >
+              🧪 Feedback
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -115,6 +121,13 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 ℹ️ Über uns
+              </Link>
+              <Link 
+                href="/feedback" 
+                className="px-4 py-2 rounded-lg bg-[var(--accent)] text-[var(--primary)] font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                🧪 Feedback geben
               </Link>
             </div>
           </nav>
