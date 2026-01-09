@@ -46,10 +46,12 @@ export default function Header() {
               Stadtkarte
             </Link>
             <Link 
-              href="/abstimmungen" 
+              href="https://www.moosburg.de/buergerinfo-portal-2" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-[var(--accent)] transition-colors font-medium"
             >
-              Abstimmungen
+              Abstimmungen ↗
             </Link>
             <Link 
               href="/ueber-uns" 
@@ -109,11 +111,13 @@ export default function Header() {
                 🗺️ Stadtkarte
               </Link>
               <Link 
-                href="/abstimmungen" 
+                href="https://www.moosburg.de/buergerinfo-portal-2" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                📊 Abstimmungen
+                📊 Abstimmungen ↗
               </Link>
               <Link 
                 href="/ueber-uns" 
