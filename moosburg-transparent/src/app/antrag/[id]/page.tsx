@@ -20,10 +20,10 @@ export default async function AntragDetail({ params }: Props) {
   const kategorie = kategorien[antrag.kategorie];
 
   const statusConfig = {
-    'angenommen': { label: 'Angenommen', class: 'badge-success', icon: '✅' },
-    'abgelehnt': { label: 'Abgelehnt', class: 'badge-danger', icon: '❌' },
-    'in-beratung': { label: 'In Beratung', class: 'badge-warning', icon: '⏳' },
-    'vertagt': { label: 'Vertagt', class: 'badge-info', icon: '📅' },
+    'angenommen': { label: 'Angenommen', class: 'badge-success' },
+    'abgelehnt': { label: 'Abgelehnt', class: 'badge-danger' },
+    'in-beratung': { label: 'In Beratung', class: 'badge-warning' },
+    'vertagt': { label: 'Vertagt', class: 'badge-info' },
   };
 
   const status = statusConfig[antrag.status];
@@ -56,18 +56,22 @@ export default async function AntragDetail({ params }: Props) {
         style={{ backgroundColor: `${kategorie.farbe}15` }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Status Badge - prominent */}
+          <div className="mb-4">
+            <span className={`inline-flex items-center px-4 py-2 rounded-lg text-base font-semibold ${status.class}`}>
+              {status.label}
+            </span>
+          </div>
+
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <span 
-              className="w-10 h-10 rounded-lg flex items-center justify-center text-xl"
-              style={{ backgroundColor: kategorie.farbe + '30' }}
+              className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-semibold"
+              style={{ backgroundColor: kategorie.farbe }}
             >
-              {kategorie.icon}
+              {kategorie.label.charAt(0)}
             </span>
             <span className="text-sm font-medium" style={{ color: kategorie.farbe }}>
               {kategorie.label}
-            </span>
-            <span className={`badge ${status.class}`}>
-              {status.icon} {status.label}
             </span>
           </div>
 
@@ -79,9 +83,9 @@ export default async function AntragDetail({ params }: Props) {
           </h1>
 
           <div className="flex flex-wrap gap-4 text-sm text-[var(--neutral-gray)]">
-            <span>📅 {formatDate(antrag.datum)}</span>
-            <span>🏛️ {antrag.sitzung}</span>
-            {antrag.stadtteil && <span>📍 {antrag.stadtteil}</span>}
+            <span>{formatDate(antrag.datum)}</span>
+            <span>{antrag.sitzung}</span>
+            {antrag.stadtteil && <span>{antrag.stadtteil}</span>}
           </div>
         </div>
       </div>
@@ -94,7 +98,7 @@ export default async function AntragDetail({ params }: Props) {
             {/* Summary */}
             <div className="card p-6">
               <h2 className="font-semibold text-lg mb-3" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                📝 Kurz erklärt
+                Kurz erklärt
               </h2>
               <p className="text-[var(--neutral-dark)] leading-relaxed bg-[var(--secondary)] p-4 rounded-lg">
                 {antrag.kurzfassung}
@@ -104,10 +108,29 @@ export default async function AntragDetail({ params }: Props) {
             {/* Full Description */}
             <div className="card p-6">
               <h2 className="font-semibold text-lg mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                📄 Details zum Antrag
+                Details zum Antrag
               </h2>
               <div className="prose prose-sm max-w-none text-[var(--neutral-dark)]">
                 {antrag.beschreibung.split('\n\n').map((paragraph, idx) => {
+                  // Überschrift mit Bullet-Points darunter
+                  if (paragraph.startsWith('**') && paragraph.includes('\n- ')) {
+                    const lines = paragraph.split('\n');
+                    const heading = lines[0].replace(/\*\*/g, '');
+                    const bullets = lines.slice(1).filter(line => line.startsWith('- '));
+                    return (
+                      <div key={idx}>
+                        <h3 className="font-semibold mt-4 mb-2">{heading}</h3>
+                        <ul className="list-disc pl-5 space-y-1 mb-4">
+                          {bullets.map((item, i) => (
+                            <li key={i} className="text-[var(--neutral-dark)]">
+                              {item.replace('- ', '')}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    );
+                  }
+                  // Nur Überschrift
                   if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
                     return (
                       <h3 key={idx} className="font-semibold mt-4 mb-2">
@@ -115,15 +138,19 @@ export default async function AntragDetail({ params }: Props) {
                       </h3>
                     );
                   }
+                  // Nur Bullet-Points
                   if (paragraph.startsWith('- ')) {
                     return (
-                      <ul key={idx} className="list-disc pl-5 space-y-1">
-                        {paragraph.split('\n').map((item, i) => (
-                          <li key={i}>{item.replace('- ', '')}</li>
+                      <ul key={idx} className="list-disc pl-5 space-y-1 mb-4">
+                        {paragraph.split('\n').filter(line => line.startsWith('- ')).map((item, i) => (
+                          <li key={i} className="text-[var(--neutral-dark)]">
+                            {item.replace('- ', '')}
+                          </li>
                         ))}
                       </ul>
                     );
                   }
+                  // Normaler Paragraph
                   return <p key={idx} className="mb-3">{paragraph}</p>;
                 })}
               </div>
@@ -132,7 +159,7 @@ export default async function AntragDetail({ params }: Props) {
             {/* Timeline */}
             <div className="card p-6">
               <h2 className="font-semibold text-lg mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                ⏱️ Zeitverlauf
+                Zeitverlauf
               </h2>
               <div className="relative">
                 <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-200" />
@@ -182,7 +209,7 @@ export default async function AntragDetail({ params }: Props) {
             {/* Share */}
             <div className="card p-6">
               <h3 className="font-semibold text-lg mb-3" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                📤 Teilen
+                Teilen
               </h3>
               <p className="text-sm text-[var(--neutral-gray)] mb-4">
                 Mach andere Bürger:innen auf diesen Antrag aufmerksam!

@@ -39,7 +39,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/antraege" className="btn-accent inline-flex items-center gap-2">
-                📋 Alle Anträge ansehen
+                Alle Anträge ansehen
               </Link>
               <Link 
                 href="/ueber-uns" 
@@ -82,7 +82,9 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-[var(--primary)] rounded-xl flex items-center justify-center text-white text-xl flex-shrink-0">
-                🏛️
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
               </div>
               <div>
                 <h2 className="font-semibold text-[var(--primary)]" style={{ fontFamily: 'Poppins, sans-serif' }}>
@@ -92,7 +94,7 @@ export default function Home() {
                   {formatDate(naechsteSitzung.datum)} um {naechsteSitzung.uhrzeit} Uhr
                 </p>
                 <p className="text-xs text-[var(--neutral-gray)]">
-                  📍 {naechsteSitzung.ort}
+                  {naechsteSitzung.ort}
                 </p>
               </div>
             </div>
@@ -159,7 +161,12 @@ export default function Home() {
                 href={`/antraege?kategorie=${key}`}
                 className="card p-4 text-center hover:scale-105"
               >
-                <span className="text-3xl mb-2 block">{kategorie.icon}</span>
+                <span 
+                  className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-semibold mx-auto mb-2"
+                  style={{ backgroundColor: kategorie.farbe }}
+                >
+                  {kategorie.label.charAt(0)}
+                </span>
                 <span className="text-sm font-medium">{kategorie.label}</span>
               </Link>
             ))}

@@ -55,16 +55,16 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4 text-[var(--accent)]">Kontakt</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>📧 info@moosburg-transparent.de</li>
-              <li>🏛️ Stadt Moosburg a.d. Isar</li>
-              <li>📍 Stadtplatz 13, 85368 Moosburg</li>
+              <li>info@moosburg-transparent.de</li>
+              <li>Stadt Moosburg a.d. Isar</li>
+              <li>Stadtplatz 13, 85368 Moosburg</li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-          <p>© 2024 Moosburg Transparent. Alle Rechte vorbehalten.</p>
+          <p>© 2025 Moosburg Transparent. Alle Rechte vorbehalten.</p>
           <div className="flex gap-6">
             <Link href="/impressum" className="hover:text-white transition-colors">
               Impressum

@@ -45,7 +45,7 @@ export default function AntraegePage() {
             <div className="flex-1">
               <input
                 type="text"
-                placeholder="🔍 Suche nach Anträgen..."
+                placeholder="Suche nach Anträgen..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
@@ -61,7 +61,7 @@ export default function AntraegePage() {
               <option value="alle">Alle Kategorien</option>
               {Object.entries(kategorien).map(([key, kat]) => (
                 <option key={key} value={key}>
-                  {kat.icon} {kat.label}
+                  {kat.label}
                 </option>
               ))}
             </select>
@@ -73,10 +73,10 @@ export default function AntraegePage() {
               className="px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] bg-white"
             >
               <option value="alle">Alle Status</option>
-              <option value="angenommen">✅ Angenommen</option>
-              <option value="abgelehnt">❌ Abgelehnt</option>
-              <option value="in-beratung">⏳ In Beratung</option>
-              <option value="vertagt">📅 Vertagt</option>
+              <option value="angenommen">Angenommen</option>
+              <option value="abgelehnt">Abgelehnt</option>
+              <option value="in-beratung">In Beratung</option>
+              <option value="vertagt">Vertagt</option>
             </select>
 
             {/* Stadtteil Filter */}
@@ -88,7 +88,7 @@ export default function AntraegePage() {
               <option value="alle">Alle Stadtteile</option>
               {stadtteile.map((stadtteil) => (
                 <option key={stadtteil} value={stadtteil}>
-                  📍 {stadtteil}
+                  {stadtteil}
                 </option>
               ))}
             </select>
@@ -105,7 +105,6 @@ export default function AntraegePage() {
 
         {filteredAntraege.length === 0 ? (
           <div className="card p-12 text-center">
-            <p className="text-4xl mb-4">🔍</p>
             <p className="text-lg font-medium text-[var(--neutral-dark)]">
               Keine Anträge gefunden
             </p>

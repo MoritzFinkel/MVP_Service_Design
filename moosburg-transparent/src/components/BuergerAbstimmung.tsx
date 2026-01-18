@@ -37,7 +37,7 @@ export default function BuergerAbstimmung({
   return (
     <div className="card p-6">
       <h3 className="font-semibold text-lg mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
-        🗳️ Wie würdest du abstimmen?
+        Wie würdest du abstimmen?
       </h3>
       <p className="text-sm text-[var(--neutral-gray)] mb-4">
         Diese symbolische Abstimmung zeigt die Meinung der Bürger:innen. 
@@ -57,7 +57,7 @@ export default function BuergerAbstimmung({
               : 'bg-[var(--success)]/10 text-[var(--success)] hover:bg-[var(--success)] hover:text-white'
           }`}
         >
-          👍 Dafür
+          Dafür
         </button>
         <button
           onClick={() => handleVote('dagegen')}
@@ -70,7 +70,7 @@ export default function BuergerAbstimmung({
               : 'bg-[var(--danger)]/10 text-[var(--danger)] hover:bg-[var(--danger)] hover:text-white'
           }`}
         >
-          👎 Dagegen
+          Dagegen
         </button>
       </div>
 
@@ -100,7 +100,7 @@ export default function BuergerAbstimmung({
 
       {hasVoted && (
         <p className="text-center text-sm text-[var(--neutral-gray)] mt-4 p-2 bg-[var(--secondary)] rounded-lg">
-          ✅ Danke für deine Stimme! {total + 1} Bürger:innen haben abgestimmt.
+          Danke für deine Stimme! {total + 1} Bürger:innen haben abgestimmt.
         </p>
       )}
     </div>

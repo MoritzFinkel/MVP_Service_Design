@@ -2,7 +2,7 @@ export interface Abstimmung {
   partei: string;
   dafuer: number;
   dagegen: number;
-  enthaltung: number;
+  abwesend: number;
   farbe: string;
 }
 
@@ -19,7 +19,7 @@ export interface Antrag {
   abstimmung: {
     dafuer: number;
     dagegen: number;
-    enthaltung: number;
+    abwesend: number;
     details: Abstimmung[];
   };
   timeline: {
@@ -65,15 +65,15 @@ Die Kosten für neue Schilder und Markierungen werden auf ca. 15.000€ geschät
     sitzung: "Stadtratssitzung November 2024",
     stadtteil: "Altstadt",
     abstimmung: {
-      dafuer: 18,
+      dafuer: 17,
       dagegen: 6,
-      enthaltung: 2,
+      abwesend: 2,
       details: [
-        { partei: "CSU", dafuer: 6, dagegen: 4, enthaltung: 1, farbe: "#0088CC" },
-        { partei: "SPD", dafuer: 5, dagegen: 0, enthaltung: 0, farbe: "#E3000F" },
-        { partei: "Grüne", dafuer: 4, dagegen: 0, enthaltung: 0, farbe: "#46962B" },
-        { partei: "FW", dafuer: 2, dagegen: 2, enthaltung: 1, farbe: "#FF8800" },
-        { partei: "FDP", dafuer: 1, dagegen: 0, enthaltung: 0, farbe: "#FFED00" },
+        { partei: "CSU", dafuer: 6, dagegen: 4, abwesend: 1, farbe: "#0088CC" },
+        { partei: "SPD", dafuer: 4, dagegen: 0, abwesend: 1, farbe: "#E3000F" },
+        { partei: "Grüne", dafuer: 4, dagegen: 0, abwesend: 0, farbe: "#46962B" },
+        { partei: "FW", dafuer: 2, dagegen: 2, abwesend: 0, farbe: "#FF8800" },
+        { partei: "FDP", dafuer: 1, dagegen: 0, abwesend: 0, farbe: "#FFED00" },
       ]
     },
     timeline: [
@@ -131,15 +131,15 @@ Das Projekt ist mit 180.000€ veranschlagt, davon werden 60.000€ durch Förde
     sitzung: "Stadtratssitzung November 2024",
     stadtteil: "Stadtpark",
     abstimmung: {
-      dafuer: 24,
+      dafuer: 23,
       dagegen: 0,
-      enthaltung: 2,
+      abwesend: 2,
       details: [
-        { partei: "CSU", dafuer: 10, dagegen: 0, enthaltung: 1, farbe: "#0088CC" },
-        { partei: "SPD", dafuer: 5, dagegen: 0, enthaltung: 0, farbe: "#E3000F" },
-        { partei: "Grüne", dafuer: 4, dagegen: 0, enthaltung: 0, farbe: "#46962B" },
-        { partei: "FW", dafuer: 4, dagegen: 0, enthaltung: 1, farbe: "#FF8800" },
-        { partei: "FDP", dafuer: 1, dagegen: 0, enthaltung: 0, farbe: "#FFED00" },
+        { partei: "CSU", dafuer: 10, dagegen: 0, abwesend: 1, farbe: "#0088CC" },
+        { partei: "SPD", dafuer: 5, dagegen: 0, abwesend: 0, farbe: "#E3000F" },
+        { partei: "Grüne", dafuer: 4, dagegen: 0, abwesend: 0, farbe: "#46962B" },
+        { partei: "FW", dafuer: 3, dagegen: 0, abwesend: 1, farbe: "#FF8800" },
+        { partei: "FDP", dafuer: 1, dagegen: 0, abwesend: 0, farbe: "#FFED00" },
       ]
     },
     timeline: [
@@ -193,7 +193,7 @@ Jährliche Einsparung: 40.000€`,
     abstimmung: {
       dafuer: 0,
       dagegen: 0,
-      enthaltung: 0,
+      abwesend: 0,
       details: []
     },
     timeline: [
@@ -251,14 +251,14 @@ Verwendung: 100% für ÖPNV-Verbesserung`,
     stadtteil: "Innenstadt",
     abstimmung: {
       dafuer: 8,
-      dagegen: 16,
-      enthaltung: 2,
+      dagegen: 15,
+      abwesend: 2,
       details: [
-        { partei: "CSU", dafuer: 2, dagegen: 8, enthaltung: 1, farbe: "#0088CC" },
-        { partei: "SPD", dafuer: 2, dagegen: 3, enthaltung: 0, farbe: "#E3000F" },
-        { partei: "Grüne", dafuer: 4, dagegen: 0, enthaltung: 0, farbe: "#46962B" },
-        { partei: "FW", dafuer: 0, dagegen: 4, enthaltung: 1, farbe: "#FF8800" },
-        { partei: "FDP", dafuer: 0, dagegen: 1, enthaltung: 0, farbe: "#FFED00" },
+        { partei: "CSU", dafuer: 2, dagegen: 8, abwesend: 1, farbe: "#0088CC" },
+        { partei: "SPD", dafuer: 2, dagegen: 3, abwesend: 0, farbe: "#E3000F" },
+        { partei: "Grüne", dafuer: 4, dagegen: 0, abwesend: 0, farbe: "#46962B" },
+        { partei: "FW", dafuer: 0, dagegen: 4, abwesend: 1, farbe: "#FF8800" },
+        { partei: "FDP", dafuer: 0, dagegen: 0, abwesend: 0, farbe: "#FFED00" },
       ]
     },
     timeline: [
@@ -303,12 +303,12 @@ export const naechsteSitzung = {
 };
 
 export const kategorien = {
-  verkehr: { label: "Verkehr", icon: "🚗", farbe: "#0077B6" },
-  umwelt: { label: "Umwelt & Klima", icon: "🌱", farbe: "#06D6A0" },
-  soziales: { label: "Soziales & Familie", icon: "👨‍👩‍👧‍👦", farbe: "#EF476F" },
-  finanzen: { label: "Finanzen", icon: "💰", farbe: "#FFD166" },
-  kultur: { label: "Kultur & Bildung", icon: "🎭", farbe: "#9B5DE5" },
-  bau: { label: "Bauen & Wohnen", icon: "🏗️", farbe: "#FF8800" },
+  verkehr: { label: "Verkehr", farbe: "#0077B6" },
+  umwelt: { label: "Umwelt & Klima", farbe: "#06D6A0" },
+  soziales: { label: "Soziales & Familie", farbe: "#E056A0" },
+  finanzen: { label: "Finanzen", farbe: "#FFD166" },
+  kultur: { label: "Kultur & Bildung", farbe: "#9B5DE5" },
+  bau: { label: "Bauen & Wohnen", farbe: "#FF8800" },
 };
 
 export const stadtteile = [

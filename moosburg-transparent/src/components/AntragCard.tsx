@@ -25,7 +25,7 @@ export default function AntragCard({ antrag }: AntragCardProps) {
     });
   };
 
-  const totalVotes = antrag.abstimmung.dafuer + antrag.abstimmung.dagegen + antrag.abstimmung.enthaltung;
+  const totalVotes = antrag.abstimmung.dafuer + antrag.abstimmung.dagegen + antrag.abstimmung.abwesend;
   const dafuerPercent = totalVotes > 0 ? (antrag.abstimmung.dafuer / totalVotes) * 100 : 0;
 
   return (
@@ -35,10 +35,10 @@ export default function AntragCard({ antrag }: AntragCardProps) {
         <div className="flex items-start justify-between gap-3 mb-3">
           <div className="flex items-center gap-2">
             <span 
-              className="w-8 h-8 rounded-lg flex items-center justify-center text-lg"
-              style={{ backgroundColor: `${kategorie.farbe}20` }}
+              className="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-medium text-white"
+              style={{ backgroundColor: kategorie.farbe }}
             >
-              {kategorie.icon}
+              {kategorie.label.charAt(0)}
             </span>
             <span className="text-xs text-[var(--neutral-gray)]">
               {kategorie.label}
@@ -84,11 +84,11 @@ export default function AntragCard({ antrag }: AntragCardProps) {
 
         {/* Footer */}
         <div className="flex items-center justify-between text-xs text-[var(--neutral-gray)] pt-3 border-t border-gray-100">
-          <span>📅 {formatDate(antrag.datum)}</span>
+          <span>{formatDate(antrag.datum)}</span>
           {antrag.stadtteil && (
-            <span>📍 {antrag.stadtteil}</span>
+            <span>{antrag.stadtteil}</span>
           )}
-          <span>💬 {antrag.kommentare.length}</span>
+          <span>{antrag.kommentare.length} Kommentare</span>
         </div>
       </article>
     </Link>

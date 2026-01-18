@@ -36,7 +36,7 @@ export default function KartePage() {
             className="text-3xl md:text-4xl font-bold mb-2"
             style={{ fontFamily: 'Poppins, sans-serif' }}
           >
-            🗺️ Stadtkarte
+            Stadtkarte
           </h1>
           <p className="text-[var(--secondary)]">
             Entdecke Anträge und Projekte in deinem Stadtteil
@@ -115,7 +115,11 @@ export default function KartePage() {
 
                 {/* Center label */}
                 <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
-                  <span className="text-4xl">🏛️</span>
+                  <div className="w-12 h-12 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
                   <p className="text-sm font-semibold text-[var(--primary)] bg-white/80 px-2 py-1 rounded mt-1">
                     Moosburg
                   </p>
@@ -140,7 +144,7 @@ export default function KartePage() {
           <div className="space-y-4">
             <div className="card p-6">
               <h2 className="font-semibold text-lg mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                {selectedStadtteil ? `📍 ${selectedStadtteil}` : '📍 Alle Stadtteile'}
+                {selectedStadtteil ? selectedStadtteil : 'Alle Stadtteile'}
               </h2>
               
               {selectedStadtteil && (
@@ -172,7 +176,12 @@ export default function KartePage() {
                         className="block p-3 bg-[var(--neutral-light)] rounded-lg hover:bg-[var(--secondary)] transition-colors"
                       >
                         <div className="flex items-start gap-2">
-                          <span className="text-lg">{kategorie.icon}</span>
+                          <span 
+                            className="w-6 h-6 rounded flex items-center justify-center text-white text-xs font-medium flex-shrink-0"
+                            style={{ backgroundColor: kategorie.farbe }}
+                          >
+                            {kategorie.label.charAt(0)}
+                          </span>
                           <div>
                             <p className="font-medium text-sm line-clamp-1">
                               {antrag.titel}

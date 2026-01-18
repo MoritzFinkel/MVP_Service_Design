@@ -141,13 +141,13 @@ export default function FeedbackPage() {
   };
 
   const steps = [
-    { title: "Willkommen", icon: "👋" },
-    { title: "Über dich", icon: "👤" },
-    { title: "Aufgaben 1-3", icon: "📋" },
-    { title: "Aufgaben 4-6", icon: "📋" },
-    { title: "SUS 1-5", icon: "📊" },
-    { title: "SUS 6-10", icon: "📊" },
-    { title: "Feedback", icon: "💬" },
+    { title: "Willkommen", icon: "1" },
+    { title: "Über dich", icon: "2" },
+    { title: "Aufgaben 1-3", icon: "3" },
+    { title: "Aufgaben 4-6", icon: "4" },
+    { title: "SUS 1-5", icon: "5" },
+    { title: "SUS 6-10", icon: "6" },
+    { title: "Feedback", icon: "7" },
   ];
 
   const RatingScale = ({ 
@@ -346,7 +346,7 @@ export default function FeedbackPage() {
               </div>
 
               <p className="text-center text-sm text-[var(--neutral-gray)]">
-                ⏱️ Dauer: ca. 10-15 Minuten (Aufgaben + Feedback)
+                Dauer: ca. 10-15 Minuten (Aufgaben + Feedback)
               </p>
             </div>
           )}
@@ -358,7 +358,7 @@ export default function FeedbackPage() {
                 className="text-xl font-bold text-[var(--neutral-dark)] mb-6"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
-                👤 Kurz über dich
+                Kurz über dich
               </h2>
               
               <div className="mb-6">
@@ -540,14 +540,14 @@ export default function FeedbackPage() {
                 className="text-xl font-bold text-[var(--neutral-dark)] mb-4"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
-                📊 System Usability Scale (1/2)
+                System Usability Scale (1/2)
               </h2>
               <p className="text-[var(--neutral-gray)] mb-2 text-sm">
                 Bitte bewerte die folgenden Aussagen von 1 (Stimme gar nicht zu) bis 5 (Stimme voll zu).
               </p>
               <div className="bg-[var(--secondary)] p-3 rounded-lg mb-6">
                 <p className="text-xs text-[var(--primary)]">
-                  💡 Dies ist ein standardisierter Fragebogen zur Messung der Benutzerfreundlichkeit.
+                  Dies ist ein standardisierter Fragebogen zur Messung der Benutzerfreundlichkeit.
                 </p>
               </div>
 
@@ -592,7 +592,7 @@ export default function FeedbackPage() {
                 className="text-xl font-bold text-[var(--neutral-dark)] mb-4"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
-                📊 System Usability Scale (2/2)
+                System Usability Scale (2/2)
               </h2>
               <p className="text-[var(--neutral-gray)] mb-6 text-sm">
                 Bitte bewerte die folgenden Aussagen von 1 (Stimme gar nicht zu) bis 5 (Stimme voll zu).
@@ -640,12 +640,12 @@ export default function FeedbackPage() {
                 className="text-xl font-bold text-[var(--neutral-dark)] mb-6"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
-                💬 Dein Feedback
+                Dein Feedback
               </h2>
 
               <div className="mb-6">
                 <label className="block text-sm font-medium text-[var(--neutral-dark)] mb-2">
-                  😊 Was hat dir besonders gut gefallen?
+                  Was hat dir besonders gut gefallen?
                 </label>
                 <textarea
                   value={formData.gutGefallen}
@@ -657,7 +657,7 @@ export default function FeedbackPage() {
 
               <div className="mb-6">
                 <label className="block text-sm font-medium text-[var(--neutral-dark)] mb-2">
-                  😕 Was hat dich verwirrt oder gestört?
+                  Was hat dich verwirrt oder gestört?
                 </label>
                 <textarea
                   value={formData.verwirrend}
@@ -669,7 +669,7 @@ export default function FeedbackPage() {
 
               <div className="mb-6">
                 <label className="block text-sm font-medium text-[var(--neutral-dark)] mb-2">
-                  💡 Was fehlt dir auf der Website?
+                  Was fehlt dir auf der Website?
                 </label>
                 <textarea
                   value={formData.fehlt}
@@ -681,7 +681,7 @@ export default function FeedbackPage() {
 
               <div className="mb-6">
                 <label className="block text-sm font-medium text-[var(--neutral-dark)] mb-2">
-                  📝 Sonstige Anmerkungen
+                  Sonstige Anmerkungen
                 </label>
                 <textarea
                   value={formData.sonstiges}
@@ -724,7 +724,7 @@ export default function FeedbackPage() {
                   disabled={isSubmitting}
                   className={`btn-accent ${isSubmitting ? "opacity-50 cursor-wait" : ""}`}
                 >
-                  {isSubmitting ? "⏳ Wird gesendet..." : "✓ Feedback absenden"}
+                  {isSubmitting ? "Wird gesendet..." : "Feedback absenden"}
                 </button>
               </div>
             )}

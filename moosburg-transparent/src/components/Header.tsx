@@ -63,7 +63,7 @@ export default function Header() {
               href="/feedback" 
               className="bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity"
             >
-              🧪 Feedback
+              Feedback
             </Link>
           </nav>
 
@@ -94,21 +94,21 @@ export default function Header() {
                 className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                🏠 Dashboard
+                Dashboard
               </Link>
               <Link 
                 href="/antraege" 
                 className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                📋 Alle Anträge
+                Alle Anträge
               </Link>
               <Link 
                 href="/karte" 
                 className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                🗺️ Stadtkarte
+                Stadtkarte
               </Link>
               <Link 
                 href="https://www.moosburg.de/buergerinfo-portal-2" 
@@ -117,21 +117,21 @@ export default function Header() {
                 className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                📊 Abstimmungen ↗
+                Abstimmungen ↗
               </Link>
               <Link 
                 href="/ueber-uns" 
                 className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                ℹ️ Über uns
+                Über uns
               </Link>
               <Link 
                 href="/feedback" 
                 className="px-4 py-2 rounded-lg bg-[var(--accent)] text-[var(--primary)] font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                🧪 Feedback geben
+                Feedback geben
               </Link>
             </div>
           </nav>
