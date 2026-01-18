@@ -1,0 +1,152 @@
+{
+  "name": "Moosburg Stadtrat PDF Crawler",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "trigger-node",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// ========================================\n// MANUELLE PDF-LISTE - Moosburg Stadtrat\n// ========================================\n\nconst pdfListe = [\n  {\n    url: 'https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=63947&type=do&smcmode=32832',\n    titel: 'Stadtratssitzung Januar 2026',\n    datum: '2026-01-15'\n  },\n  {\n    url: 'https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=63517&type=do&smcmode=32832',\n    titel: 'Stadtratssitzung Dezember 2025',\n    datum: '2025-12-18'\n  },\n  {\n    url: 'https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62896&type=do&smcmode=32832',\n    titel: 'Stadtratssitzung November 2025',\n    datum: '2025-11-20'\n  },\n  {\n    url: 'https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62643&type=do&smcmode=32832',\n    titel: 'Stadtratssitzung Oktober 2025',\n    datum: '2025-10-16'\n  }\n];\n\nreturn pdfListe.map(pdf => ({ json: pdf }));"
+      },
+      "id": "pdf-liste",
+      "name": "PDF-Liste",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "loop-items",
+      "name": "Loop Over Items",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [750, 300]
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "id": "download-pdf",
+      "name": "PDF herunterladen",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1000, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Speichere Metadaten\nconst item = $input.first();\nconst loopItem = $('Loop Over Items').first().json;\n\nreturn [{\n  json: {\n    ...item.json,\n    _meta: {\n      titel: loopItem.titel || 'Unbekannte Sitzung',\n      datum: loopItem.datum || '2025-01-01',\n      url: loopItem.url || ''\n    }\n  },\n  binary: item.binary\n}];"
+      },
+      "id": "merge-meta",
+      "name": "Metadaten merken",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1250, 300]
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "options": {}
+      },
+      "id": "extract-text",
+      "name": "PDF Text extrahieren",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [1500, 300]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o-mini",
+        "messages": {
+          "values": [
+            {
+              "content": "=Du bist ein Experte für die Analyse von Stadtratssitzungsprotokollen.\n\nDIESE SITZUNG:\n- Sitzung: {{ $json._meta.titel }}\n- Datum: {{ $json._meta.datum }}\n\nExtrahiere aus dem Protokoll-Text alle Anträge/Beschlüsse als JSON-Array.\n\nFür jeden Antrag:\n- titel: Titel des Antrags\n- kurzfassung: Kurze bürgerfreundliche Zusammenfassung (1-2 Sätze)\n- beschreibung: Ausführlichere Erklärung in einfacher Sprache\n- kategorie: verkehr, umwelt, soziales, finanzen, kultur, oder bau\n- status: angenommen, abgelehnt, in-beratung, oder vertagt\n- abstimmung: { dafuer: Zahl, dagegen: Zahl, abwesend: Zahl }\n- abstimmungDetails: [{ partei: Name, dafuer: Zahl, dagegen: Zahl, abwesend: Zahl }]\n\nWICHTIG:\n- Datum für ALLE Anträge ist: {{ $json._meta.datum }}\n- Stadtrat hat 25 Mitglieder\n- KEINE Enthaltungen (nur dafür, dagegen, abwesend)\n\nNUR JSON zurückgeben!\n\nText:\n{{ $json.data }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0.2
+        }
+      },
+      "id": "ai-parse",
+      "name": "AI Analyse",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.4,
+      "position": [1750, 300],
+      "credentials": {
+        "openAiApi": {
+          "id": "OPENAI_CREDENTIALS_ID",
+          "name": "OpenAI API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first().json;\nconst aiResponse = input.message?.content || input.text || input.content || '{}';\nconst meta = $('PDF Text extrahieren').first().json._meta || {};\n\nlet antraege = [];\ntry {\n  let jsonStr = aiResponse;\n  if (jsonStr.includes('```json')) jsonStr = jsonStr.split('```json')[1].split('```')[0];\n  else if (jsonStr.includes('```')) jsonStr = jsonStr.split('```')[1].split('```')[0];\n  antraege = JSON.parse(jsonStr.trim());\n  if (!Array.isArray(antraege)) antraege = [antraege];\n} catch (e) {\n  return [{ json: { error: 'Parse Error', sitzung: meta.titel } }];\n}\n\nconst farben = { 'CSU': '#0088CC', 'SPD': '#E3000F', 'Grüne': '#46962B', 'GRÜNE': '#46962B', 'FW': '#FF8800', 'Freie Wähler': '#FF8800' };\n\nconst result = antraege.map((a, i) => ({\n  id: `crawled-${Date.now()}-${i}`,\n  titel: a.titel || 'Unbekannt',\n  kurzfassung: a.kurzfassung || '',\n  beschreibung: a.beschreibung || '',\n  kategorie: a.kategorie || 'bau',\n  status: a.status || 'angenommen',\n  datum: meta.datum,\n  sitzung: meta.titel,\n  abstimmung: {\n    dafuer: a.abstimmung?.dafuer || 0,\n    dagegen: a.abstimmung?.dagegen || 0,\n    abwesend: a.abstimmung?.abwesend || 0,\n    details: (a.abstimmungDetails || []).map(d => ({ ...d, farbe: farben[d.partei] || '#888' }))\n  },\n  timeline: [{ datum: meta.datum, ereignis: 'Abstimmung im Stadtrat' }],\n  kommentare: [],\n  buergerAbstimmung: { dafuer: 0, dagegen: 0 },\n  quelleUrl: meta.url\n}));\n\nreturn result.map(r => ({ json: r }));"
+      },
+      "id": "format-output",
+      "name": "Output formatieren",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2000, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Sammle alle Anträge\nconst alle = $input.all().map(i => i.json).filter(a => !a.error);\nreturn [{ json: { antraege: alle, count: alle.length, crawledAt: new Date().toISOString() } }];"
+      },
+      "id": "final-output",
+      "name": "Finaler Output",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2250, 300]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [[{ "node": "PDF-Liste", "type": "main", "index": 0 }]]
+    },
+    "PDF-Liste": {
+      "main": [[{ "node": "Loop Over Items", "type": "main", "index": 0 }]]
+    },
+    "Loop Over Items": {
+      "main": [
+        [{ "node": "PDF herunterladen", "type": "main", "index": 0 }],
+        [{ "node": "Finaler Output", "type": "main", "index": 0 }]
+      ]
+    },
+    "PDF herunterladen": {
+      "main": [[{ "node": "Metadaten merken", "type": "main", "index": 0 }]]
+    },
+    "Metadaten merken": {
+      "main": [[{ "node": "PDF Text extrahieren", "type": "main", "index": 0 }]]
+    },
+    "PDF Text extrahieren": {
+      "main": [[{ "node": "AI Analyse", "type": "main", "index": 0 }]]
+    },
+    "AI Analyse": {
+      "main": [[{ "node": "Output formatieren", "type": "main", "index": 0 }]]
+    },
+    "Output formatieren": {
+      "main": [[{ "node": "Loop Over Items", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": { "executionOrder": "v1" },
+  "staticData": null,
+  "tags": [{ "name": "Moosburg Transparent" }],
+  "triggerCount": 0,
+  "pinData": {}
+}
