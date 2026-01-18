@@ -1,5 +1,5 @@
 {
-  "name": "Moosburg Stadtrat PDF Crawler",
+  "name": "Moosburg Stadtrat PDF Crawler v2",
   "nodes": [
     {
       "parameters": {},
@@ -70,23 +70,33 @@
     },
     {
       "parameters": {
-        "model": "gpt-4o-mini",
+        "jsCode": "// ========================================\n// DEBUG: Zeige was aus dem PDF extrahiert wurde\n// ========================================\nconst item = $input.first().json;\n\n// Nach PDF-Extraktion ist der Text in 'data'\nconst text = item.data || item.text || '';\n\n// Hole Metadaten aus dem vorherigen Node (Metadaten merken)\nconst metaNode = $('Metadaten merken').first().json;\nconst meta = metaNode._meta || {};\n\n// Zeige die ersten 3000 Zeichen des extrahierten Texts\nconst preview = text.substring(0, 3000);\n\nconsole.log('Text Länge:', text.length);\nconsole.log('Meta:', JSON.stringify(meta));\n\nreturn [{\n  json: {\n    _debug: {\n      sitzung: meta.titel,\n      datum: meta.datum,\n      textLaenge: text.length,\n      vorschau: preview,\n      hinweis: 'Schau dir die Vorschau an!'\n    },\n    // Originaldaten weitergeben\n    data: text,\n    _meta: meta\n  }\n}];"
+      },
+      "id": "debug-text",
+      "name": "DEBUG - PDF Text anzeigen",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1750, 300]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
         "messages": {
           "values": [
             {
-              "content": "=Du bist ein Experte für die Analyse von Stadtratssitzungsprotokollen.\n\nDIESE SITZUNG:\n- Sitzung: {{ $json._meta.titel }}\n- Datum: {{ $json._meta.datum }}\n\nExtrahiere aus dem Protokoll-Text alle Anträge/Beschlüsse als JSON-Array.\n\nFür jeden Antrag:\n- titel: Titel des Antrags\n- kurzfassung: Kurze bürgerfreundliche Zusammenfassung (1-2 Sätze)\n- beschreibung: Ausführlichere Erklärung in einfacher Sprache\n- kategorie: verkehr, umwelt, soziales, finanzen, kultur, oder bau\n- status: angenommen, abgelehnt, in-beratung, oder vertagt\n- abstimmung: { dafuer: Zahl, dagegen: Zahl, abwesend: Zahl }\n- abstimmungDetails: [{ partei: Name, dafuer: Zahl, dagegen: Zahl, abwesend: Zahl }]\n\nWICHTIG:\n- Datum für ALLE Anträge ist: {{ $json._meta.datum }}\n- Stadtrat hat 25 Mitglieder\n- KEINE Enthaltungen (nur dafür, dagegen, abwesend)\n\nNUR JSON zurückgeben!\n\nText:\n{{ $json.data }}"
+              "content": "=Du analysierst ein Stadtratssitzungsprotokoll aus Moosburg.\n\nSITZUNG: {{ $('Metadaten merken').first().json._meta.titel }}\nDATUM: {{ $('Metadaten merken').first().json._meta.datum }}\n\n=== STRIKTE REGELN ===\n1. Extrahiere NUR Informationen die WÖRTLICH im Text stehen\n2. ERFINDE NICHTS - keine Anträge, keine Zahlen, keine Parteien\n3. Wenn etwas nicht im Text steht, setze null oder leeres Array\n4. Parteien-Abstimmungen stehen NICHT in den Protokollen - lasse abstimmungDetails LEER []\n5. Nur wenn eine Abstimmungszahl explizit genannt wird (z.B. \"mit 18:5 Stimmen\"), trage sie ein\n\n=== AUFGABE ===\nExtrahiere alle Beschlüsse/Anträge aus dem Text als JSON-Array.\n\nFür jeden gefundenen Beschluss:\n{\n  \"titel\": \"Exakter Titel aus dem Protokoll\",\n  \"kurzfassung\": \"1-2 Sätze was beschlossen wurde\",\n  \"beschreibung\": \"Ausführlichere Erklärung basierend auf dem Text\",\n  \"kategorie\": \"verkehr|umwelt|soziales|finanzen|kultur|bau\",\n  \"status\": \"angenommen|abgelehnt|vertagt|in-beratung\",\n  \"abstimmung\": {\n    \"dafuer\": Zahl oder 0 wenn nicht genannt,\n    \"dagegen\": Zahl oder 0 wenn nicht genannt,\n    \"abwesend\": Zahl oder 0 wenn nicht genannt\n  },\n  \"abstimmungDetails\": []  // IMMER LEER - Parteistimmen stehen nicht im Protokoll!\n}\n\nWenn KEINE Beschlüsse im Text gefunden werden, gib ein leeres Array zurück: []\n\n=== PROTOKOLL-TEXT ===\n{{ $json.data }}"
             }
           ]
         },
         "options": {
-          "temperature": 0.2
+          "temperature": 0
         }
       },
       "id": "ai-parse",
-      "name": "AI Analyse",
+      "name": "AI Analyse (GPT-4o)",
       "type": "@n8n/n8n-nodes-langchain.openAi",
       "typeVersion": 1.4,
-      "position": [1750, 300],
+      "position": [2000, 300],
       "credentials": {
         "openAiApi": {
           "id": "OPENAI_CREDENTIALS_ID",
@@ -96,23 +106,23 @@
     },
     {
       "parameters": {
-        "jsCode": "const input = $input.first().json;\nconst aiResponse = input.message?.content || input.text || input.content || '{}';\nconst meta = $('PDF Text extrahieren').first().json._meta || {};\n\nlet antraege = [];\ntry {\n  let jsonStr = aiResponse;\n  if (jsonStr.includes('```json')) jsonStr = jsonStr.split('```json')[1].split('```')[0];\n  else if (jsonStr.includes('```')) jsonStr = jsonStr.split('```')[1].split('```')[0];\n  antraege = JSON.parse(jsonStr.trim());\n  if (!Array.isArray(antraege)) antraege = [antraege];\n} catch (e) {\n  return [{ json: { error: 'Parse Error', sitzung: meta.titel } }];\n}\n\nconst farben = { 'CSU': '#0088CC', 'SPD': '#E3000F', 'Grüne': '#46962B', 'GRÜNE': '#46962B', 'FW': '#FF8800', 'Freie Wähler': '#FF8800' };\n\nconst result = antraege.map((a, i) => ({\n  id: `crawled-${Date.now()}-${i}`,\n  titel: a.titel || 'Unbekannt',\n  kurzfassung: a.kurzfassung || '',\n  beschreibung: a.beschreibung || '',\n  kategorie: a.kategorie || 'bau',\n  status: a.status || 'angenommen',\n  datum: meta.datum,\n  sitzung: meta.titel,\n  abstimmung: {\n    dafuer: a.abstimmung?.dafuer || 0,\n    dagegen: a.abstimmung?.dagegen || 0,\n    abwesend: a.abstimmung?.abwesend || 0,\n    details: (a.abstimmungDetails || []).map(d => ({ ...d, farbe: farben[d.partei] || '#888' }))\n  },\n  timeline: [{ datum: meta.datum, ereignis: 'Abstimmung im Stadtrat' }],\n  kommentare: [],\n  buergerAbstimmung: { dafuer: 0, dagegen: 0 },\n  quelleUrl: meta.url\n}));\n\nreturn result.map(r => ({ json: r }));"
+        "jsCode": "const input = $input.first().json;\nconst aiResponse = input.message?.content || input.text || input.content || '[]';\n\n// Hole Metadaten aus dem richtigen Node\nconst metaNode = $('Metadaten merken').first().json;\nconst meta = metaNode._meta || {};\n\nlet antraege = [];\ntry {\n  let jsonStr = aiResponse;\n  if (jsonStr.includes('```json')) jsonStr = jsonStr.split('```json')[1].split('```')[0];\n  else if (jsonStr.includes('```')) jsonStr = jsonStr.split('```')[1].split('```')[0];\n  const parsed = JSON.parse(jsonStr.trim());\n  antraege = Array.isArray(parsed) ? parsed : [parsed];\n} catch (e) {\n  return [{ json: { \n    error: 'Parse Error', \n    sitzung: meta.titel,\n    rawResponse: aiResponse.substring(0, 500)\n  }}];\n}\n\n// Wenn keine Anträge gefunden wurden\nif (antraege.length === 0) {\n  return [{ json: { \n    hinweis: 'Keine Beschlüsse gefunden',\n    sitzung: meta.titel,\n    datum: meta.datum\n  }}];\n}\n\nconst result = antraege.map((a, i) => ({\n  id: `crawled-${Date.now()}-${i}`,\n  titel: a.titel || 'Ohne Titel',\n  kurzfassung: a.kurzfassung || '',\n  beschreibung: a.beschreibung || '',\n  kategorie: a.kategorie || 'bau',\n  status: a.status || 'angenommen',\n  datum: meta.datum,\n  sitzung: meta.titel,\n  abstimmung: {\n    dafuer: a.abstimmung?.dafuer || 0,\n    dagegen: a.abstimmung?.dagegen || 0,\n    abwesend: a.abstimmung?.abwesend || 0,\n    details: [] // Keine erfundenen Parteistimmen!\n  },\n  timeline: [{ datum: meta.datum, ereignis: 'Beschluss im Stadtrat' }],\n  kommentare: [],\n  buergerAbstimmung: { dafuer: 0, dagegen: 0 },\n  quelleUrl: meta.url\n}));\n\nreturn result.map(r => ({ json: r }));"
       },
       "id": "format-output",
       "name": "Output formatieren",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [2000, 300]
+      "position": [2250, 300]
     },
     {
       "parameters": {
-        "jsCode": "// Sammle alle Anträge\nconst alle = $input.all().map(i => i.json).filter(a => !a.error);\nreturn [{ json: { antraege: alle, count: alle.length, crawledAt: new Date().toISOString() } }];"
+        "jsCode": "// Sammle alle Ergebnisse\nconst alle = $input.all().map(i => i.json);\nconst antraege = alle.filter(a => a.id && !a.error && !a.hinweis);\nconst fehler = alle.filter(a => a.error || a.hinweis);\n\nreturn [{ \n  json: { \n    antraege: antraege, \n    count: antraege.length, \n    fehlerOderLeer: fehler,\n    crawledAt: new Date().toISOString() \n  } \n}];"
       },
       "id": "final-output",
       "name": "Finaler Output",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [2250, 300]
+      "position": [2500, 300]
     }
   ],
   "connections": {
@@ -135,9 +145,12 @@
       "main": [[{ "node": "PDF Text extrahieren", "type": "main", "index": 0 }]]
     },
     "PDF Text extrahieren": {
-      "main": [[{ "node": "AI Analyse", "type": "main", "index": 0 }]]
+      "main": [[{ "node": "DEBUG - PDF Text anzeigen", "type": "main", "index": 0 }]]
     },
-    "AI Analyse": {
+    "DEBUG - PDF Text anzeigen": {
+      "main": [[{ "node": "AI Analyse (GPT-4o)", "type": "main", "index": 0 }]]
+    },
+    "AI Analyse (GPT-4o)": {
       "main": [[{ "node": "Output formatieren", "type": "main", "index": 0 }]]
     },
     "Output formatieren": {

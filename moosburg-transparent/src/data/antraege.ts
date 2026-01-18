@@ -40,257 +40,277 @@ export interface Antrag {
 }
 
 export const antraege: Antrag[] = [
+  // ===== ECHTE ANTRÄGE AUS BÜRGERINFO-PORTAL (gecrawlt am 18.01.2026) =====
+  // Quelle: Stadtratsprotokolle Oktober 2025 - Januar 2026
+  
+  // === JANUAR 2026 ===
   {
     id: "1",
-    titel: "Tempo 30 in der Altstadt",
-    kurzfassung: "Die Geschwindigkeit in der gesamten Altstadt soll auf 30 km/h begrenzt werden, um die Sicherheit für Fußgänger und Radfahrer zu erhöhen.",
-    beschreibung: `Der Antrag sieht vor, dass in der gesamten Moosburger Altstadt eine Geschwindigkeitsbegrenzung von 30 km/h eingeführt wird. 
+    titel: "Städtebauförderung - Bedarfsanmeldung 2026",
+    kurzfassung: "Die Stadt stellt einen Antrag auf Aufnahme in das Programm 'Lebendige Zentren' für 2026.",
+    beschreibung: `Der Stadtrat beschließt, für das Jahr 2026 einen Antrag auf Aufnahme in das Städtebauförderungsprogramm 'Lebendige Zentren' zu stellen.
 
-**Was bedeutet das konkret?**
-- Alle Straßen innerhalb des Altstadtrings werden zur Tempo-30-Zone
-- Neue Beschilderung wird aufgestellt
-- Kontrollen durch die Polizei werden verstärkt
+**Was ist geplant?**
+- Angemeldete Kosten der beabsichtigten Vorhaben: 505.000 Euro
+- Der erforderliche Eigenanteil wird im Haushalt der Stadt bereitgestellt
+- Die vorgesehenen Vorhaben und Kosten ergeben sich aus der Bedarfsmitteilung
 
-**Warum ist das wichtig?**
-- Mehr Sicherheit für Kinder auf dem Schulweg
-- Weniger Lärm für Anwohner
-- Bessere Luft durch weniger Abgase
-- Attraktivere Innenstadt zum Flanieren
-
-**Was kostet das?**
-Die Kosten für neue Schilder und Markierungen werden auf ca. 15.000€ geschätzt.`,
-    kategorie: "verkehr",
+**Nächste Schritte:**
+Die Verwaltung wird beauftragt, die erforderlichen Unterlagen zusammenzustellen und rechtzeitig bei der Regierung von Oberbayern einzureichen.`,
+    kategorie: "bau",
     status: "angenommen",
-    datum: "2024-11-15",
-    sitzung: "Stadtratssitzung November 2024",
-    stadtteil: "Altstadt",
+    datum: "2026-01-15",
+    sitzung: "Stadtratssitzung Januar 2026",
     abstimmung: {
-      dafuer: 17,
-      dagegen: 6,
-      abwesend: 2,
-      details: [
-        { partei: "CSU", dafuer: 6, dagegen: 4, abwesend: 1, farbe: "#0088CC" },
-        { partei: "SPD", dafuer: 4, dagegen: 0, abwesend: 1, farbe: "#E3000F" },
-        { partei: "Grüne", dafuer: 4, dagegen: 0, abwesend: 0, farbe: "#46962B" },
-        { partei: "FW", dafuer: 2, dagegen: 2, abwesend: 0, farbe: "#FF8800" },
-        { partei: "FDP", dafuer: 1, dagegen: 0, abwesend: 0, farbe: "#FFED00" },
-      ]
+      dafuer: 22,
+      dagegen: 0,
+      abwesend: 3,
+      details: []
     },
     timeline: [
-      { datum: "2024-09-01", ereignis: "Antrag eingereicht von Bürgerinitiative" },
-      { datum: "2024-09-20", ereignis: "Erste Beratung im Verkehrsausschuss" },
-      { datum: "2024-10-15", ereignis: "Gutachten der Verkehrsplanung liegt vor" },
-      { datum: "2024-11-15", ereignis: "Abstimmung im Stadtrat - Angenommen" },
-      { datum: "2025-01-01", ereignis: "Geplante Umsetzung" },
+      { datum: "2026-01-15", ereignis: "Einstimmig im Stadtrat beschlossen" },
     ],
-    kommentare: [
-      {
-        id: "k1",
-        autor: "Maria H.",
-        text: "Endlich! Als Mutter von zwei Grundschulkindern fühle ich mich jetzt sicherer.",
-        datum: "2024-11-16",
-        likes: 24
-      },
-      {
-        id: "k2",
-        autor: "Thomas K.",
-        text: "Wichtiger Schritt für eine lebenswertere Innenstadt. Hoffe auf gute Umsetzung!",
-        datum: "2024-11-16",
-        likes: 18
-      }
-    ],
+    kommentare: [],
     buergerAbstimmung: {
-      dafuer: 342,
-      dagegen: 89
+      dafuer: 0,
+      dagegen: 0
     }
   },
   {
     id: "2",
-    titel: "Neuer Spielplatz am Stadtpark",
-    kurzfassung: "Im Stadtpark soll ein moderner, barrierefreier Spielplatz für Kinder aller Altersgruppen entstehen.",
-    beschreibung: `Der bestehende Spielplatz am Stadtpark ist in die Jahre gekommen und soll durch eine moderne, inklusive Anlage ersetzt werden.
+    titel: "Sichere Straßen - Gehweg Industriestraße",
+    kurzfassung: "Der Gehweg an der Industriestraße wird auf mindestens 2,00 m Breite ausgebaut.",
+    beschreibung: `Antrag von Drittem Bürgermeister Dr. Stanglmaier, dem Bündnis 90/DIE GRÜNEN sowie Eltern der Theresia-Gerhardinger-Grundschule.
 
-**Was ist geplant?**
-- Barrierefreie Spielgeräte für Kinder mit und ohne Behinderung
-- Wasserspielbereich für heiße Sommertage
-- Kletterturm mit Rutsche (bis 12 Jahre)
-- Kleinkindbereich (1-6 Jahre)
-- Sitzgelegenheiten für Eltern und Großeltern
-- Trinkwasserbrunnen
+**Beschluss:**
+Der Stadtrat beschließt den Ausbau des Gehwegs an der Industriestraße von der Driescherstraße bis zur Graf-Konrad-Straße. Der Gehweg soll eine durchgängige Breite von mindestens 2,00 m erhalten.
 
 **Warum ist das wichtig?**
-- Der alte Spielplatz entspricht nicht mehr den Sicherheitsstandards
-- Inklusion: Alle Kinder sollen gemeinsam spielen können
-- Treffpunkt für Familien im Stadtteil
-
-**Was kostet das?**
-Das Projekt ist mit 180.000€ veranschlagt, davon werden 60.000€ durch Fördermittel gedeckt.`,
-    kategorie: "soziales",
+- Mehr Sicherheit für Schulkinder auf dem Weg zur Theresia-Gerhardinger-Grundschule
+- Barrierefreie Nutzung durch breiteren Gehweg
+- Bessere Trennung von Fuß- und Fahrverkehr`,
+    kategorie: "verkehr",
     status: "angenommen",
-    datum: "2024-11-15",
-    sitzung: "Stadtratssitzung November 2024",
-    stadtteil: "Stadtpark",
+    datum: "2026-01-15",
+    sitzung: "Stadtratssitzung Januar 2026",
     abstimmung: {
-      dafuer: 23,
+      dafuer: 21,
       dagegen: 0,
-      abwesend: 2,
-      details: [
-        { partei: "CSU", dafuer: 10, dagegen: 0, abwesend: 1, farbe: "#0088CC" },
-        { partei: "SPD", dafuer: 5, dagegen: 0, abwesend: 0, farbe: "#E3000F" },
-        { partei: "Grüne", dafuer: 4, dagegen: 0, abwesend: 0, farbe: "#46962B" },
-        { partei: "FW", dafuer: 3, dagegen: 0, abwesend: 1, farbe: "#FF8800" },
-        { partei: "FDP", dafuer: 1, dagegen: 0, abwesend: 0, farbe: "#FFED00" },
-      ]
+      abwesend: 4,
+      details: []
     },
     timeline: [
-      { datum: "2024-06-01", ereignis: "Bürgerbefragung zum Spielplatz" },
-      { datum: "2024-07-15", ereignis: "Planungsentwürfe vorgestellt" },
-      { datum: "2024-09-01", ereignis: "Fördermittelantrag genehmigt" },
-      { datum: "2024-11-15", ereignis: "Abstimmung im Stadtrat - Einstimmig angenommen" },
-      { datum: "2025-03-01", ereignis: "Baubeginn geplant" },
-      { datum: "2025-06-01", ereignis: "Eröffnung geplant" },
+      { datum: "2026-01-15", ereignis: "Im Stadtrat beschlossen" },
     ],
-    kommentare: [
-      {
-        id: "k3",
-        autor: "Familie Schmidt",
-        text: "Super, dass endlich auch an barrierefreie Spielgeräte gedacht wird! Unser Sohn im Rollstuhl freut sich schon.",
-        datum: "2024-11-16",
-        likes: 45
-      }
-    ],
+    kommentare: [],
     buergerAbstimmung: {
-      dafuer: 567,
-      dagegen: 12
+      dafuer: 0,
+      dagegen: 0
     }
   },
   {
     id: "3",
-    titel: "Photovoltaik auf städtischen Gebäuden",
-    kurzfassung: "Alle geeigneten städtischen Gebäude sollen mit Solaranlagen ausgestattet werden, um die Klimaziele zu erreichen.",
-    beschreibung: `Die Stadt Moosburg will ihren Beitrag zum Klimaschutz leisten und plant die Installation von Photovoltaikanlagen auf allen geeigneten kommunalen Gebäuden.
+    titel: "Fahrradschutzstreifen Industriestraße (Probebetrieb)",
+    kurzfassung: "Ein Fahrradschutzstreifen an der Industriestraße wird für ein Jahr probeweise markiert.",
+    beschreibung: `Antrag von Drittem Bürgermeister Dr. Stanglmaier, dem Bündnis 90/DIE GRÜNEN sowie Eltern der Theresia-Gerhardinger-Grundschule.
 
-**Was ist geplant?**
-- Solaranlagen auf Rathaus, Schulen, Sporthallen und Feuerwehrhaus
-- Insgesamt ca. 500 kWp Leistung
-- Eigenverbrauch des Stroms in den Gebäuden
-- Überschuss wird ins Netz eingespeist
+**Beschluss:**
+Der Stadtrat beschließt, auf der rechten Seite der Industriestraße beginnend in Höhe der Einmündung zur Driescherstraße bis zur Gutenbergstraße einen Fahrradschutzstreifen probeweise für ein Jahr anzubringen.
 
-**Warum ist das wichtig?**
-- Reduzierung der CO2-Emissionen um ca. 250 Tonnen pro Jahr
-- Einsparung von Stromkosten (ca. 40.000€ jährlich)
-- Vorbildfunktion für Bürger und Unternehmen
-- Beitrag zu den Klimazielen der Stadt
+**Evaluation:**
+Nach Ablauf des Jahres werden die gesammelten Erfahrungen dem Stadtrat zur weiteren Entscheidung vorgelegt.
 
-**Was kostet das?**
-Investition: 650.000€
-Amortisation: ca. 12 Jahre
-Jährliche Einsparung: 40.000€`,
-    kategorie: "umwelt",
-    status: "in-beratung",
-    datum: "2024-11-15",
-    sitzung: "Stadtratssitzung November 2024",
+**Hinweis:**
+Dies war eine knappe Abstimmung - 8 Stadträte stimmten dagegen.`,
+    kategorie: "verkehr",
+    status: "angenommen",
+    datum: "2026-01-15",
+    sitzung: "Stadtratssitzung Januar 2026",
     abstimmung: {
+      dafuer: 14,
+      dagegen: 8,
+      abwesend: 3,
+      details: []
+    },
+    timeline: [
+      { datum: "2026-01-15", ereignis: "Knapp im Stadtrat angenommen (14:8)" },
+    ],
+    kommentare: [],
+    buergerAbstimmung: {
       dafuer: 0,
+      dagegen: 0
+    }
+  },
+  {
+    id: "4",
+    titel: "Wirtschaftsförderung - Neue Vollzeitstelle",
+    kurzfassung: "Im Stellenplan 2026 wird eine zusätzliche Vollzeitstelle eines Wirtschaftsförderers geschaffen.",
+    beschreibung: `Der Stadtrat beschließt die Schaffung einer neuen Stelle für die Wirtschaftsförderung in Moosburg.
+
+**Details:**
+- Eine zusätzliche Vollzeitstelle eines Wirtschaftsförderers
+- Eingruppierung erfolgt nach Stellenbeschreibung gemäß Tarifrecht
+- Zusätzliches Budget von 30.000 Euro für Wirtschaftsförderung und Förderung von Start-Up-Unternehmen
+
+**Ziele:**
+- Stärkung des Wirtschaftsstandorts Moosburg
+- Unterstützung lokaler Unternehmen
+- Ansiedlung neuer Betriebe`,
+    kategorie: "finanzen",
+    status: "angenommen",
+    datum: "2026-01-15",
+    sitzung: "Stadtratssitzung Januar 2026",
+    abstimmung: {
+      dafuer: 16,
+      dagegen: 6,
+      abwesend: 3,
+      details: []
+    },
+    timeline: [
+      { datum: "2026-01-15", ereignis: "Im Stadtrat beschlossen (16:6)" },
+    ],
+    kommentare: [],
+    buergerAbstimmung: {
+      dafuer: 0,
+      dagegen: 0
+    }
+  },
+  
+  // === DEZEMBER 2025 ===
+  {
+    id: "5",
+    titel: "Sondernutzungsgebühren - Satzungsänderung",
+    kurzfassung: "Die Satzung über Gebühren für Sondernutzungen am öffentlichen Verkehrsraum wurde geändert.",
+    beschreibung: `Antrag der Freien Wähler zur Änderung der Sondernutzungsgebühren.
+
+**Änderungen:**
+- Abrechnung nach Quadratmetern statt pauschal
+- Gewerbliche Bauzaunbanner: 10 Euro je angefangener Woche
+- Nichtgewerbliche Bauzaunbanner: 5 Euro je angefangener Woche
+
+**Warum diese Änderung?**
+- Fairere Berechnung nach tatsächlichem Flächenverbrauch
+- Klare Unterscheidung zwischen gewerblicher und privater Nutzung`,
+    kategorie: "finanzen",
+    status: "angenommen",
+    datum: "2025-12-18",
+    sitzung: "Stadtratssitzung Dezember 2025",
+    abstimmung: {
+      dafuer: 20,
+      dagegen: 0,
+      abwesend: 5,
+      details: []
+    },
+    timeline: [
+      { datum: "2025-12-18", ereignis: "Einstimmig im Stadtrat beschlossen" },
+    ],
+    kommentare: [],
+    buergerAbstimmung: {
+      dafuer: 0,
+      dagegen: 0
+    }
+  },
+  {
+    id: "6",
+    titel: "Tariftreue bei öffentlichen Aufträgen",
+    kurzfassung: "Die Stadt ergänzt einen Hinweis zur Einhaltung tarifvertraglicher Regelungen in Ausschreibungen.",
+    beschreibung: `Antrag von Stadtrat Strobl (Die Linke) zur Einführung von Tariftreue bei der Vergabe öffentlicher Aufträge.
+
+**Beschluss:**
+Die Stadt Moosburg sieht derzeit von einer verpflichtenden Einführung von Tariftreueregelungen für alle öffentlichen Aufträge ab.
+
+**Kompromiss:**
+In künftigen Ausschreibungen wird folgender Satz ergänzt: Der Auftragnehmer hat bei der Ausführung des Auftrags alle für ihn geltenden tarifvertraglichen Regelungen einzuhalten.`,
+    kategorie: "finanzen",
+    status: "angenommen",
+    datum: "2025-12-18",
+    sitzung: "Stadtratssitzung Dezember 2025",
+    abstimmung: {
+      dafuer: 18,
+      dagegen: 3,
+      abwesend: 4,
+      details: []
+    },
+    timeline: [
+      { datum: "2025-12-18", ereignis: "Im Stadtrat beschlossen (18:3)" },
+    ],
+    kommentare: [],
+    buergerAbstimmung: {
+      dafuer: 0,
+      dagegen: 0
+    }
+  },
+  
+  // === NOVEMBER 2025 ===
+  {
+    id: "7",
+    titel: "Neubau Lagerhalle Kochbauerstraße",
+    kurzfassung: "Das gemeindliche Einvernehmen für eine landwirtschaftliche Lagerhalle in Moosburg-Aich wurde erteilt.",
+    beschreibung: `Der Bau-, Planungs- und Umweltausschuss hat das gemeindliche Einvernehmen erteilt.
+
+**Vorhaben:**
+- Neubau einer landwirtschaftlichen Lagerhalle
+- Standort: Kochbauerstraße 1, Moosburg-Aich
+
+**Hinweis:**
+Standardmäßige Baugenehmigung für landwirtschaftliche Zwecke.`,
+    kategorie: "bau",
+    status: "angenommen",
+    datum: "2025-11-20",
+    sitzung: "Stadtratssitzung November 2025",
+    stadtteil: "Aich",
+    abstimmung: {
+      dafuer: 11,
       dagegen: 0,
       abwesend: 0,
       details: []
     },
     timeline: [
-      { datum: "2024-10-01", ereignis: "Antrag von Grünen-Fraktion eingereicht" },
-      { datum: "2024-11-15", ereignis: "Erste Lesung im Stadtrat" },
-      { datum: "2024-12-01", ereignis: "Beratung im Umweltausschuss (geplant)" },
-      { datum: "2025-01-15", ereignis: "Abstimmung im Stadtrat (geplant)" },
+      { datum: "2025-11-20", ereignis: "Einstimmig im Bauausschuss genehmigt" },
     ],
-    kommentare: [
-      {
-        id: "k4",
-        autor: "Energieberater M.",
-        text: "Sehr sinnvolle Investition. Die Amortisation ist realistisch berechnet.",
-        datum: "2024-11-17",
-        likes: 12
-      },
-      {
-        id: "k5",
-        autor: "Skeptiker99",
-        text: "Wäre es nicht besser, das Geld in die Sanierung der Schulgebäude zu stecken?",
-        datum: "2024-11-17",
-        likes: 8
-      }
-    ],
+    kommentare: [],
     buergerAbstimmung: {
-      dafuer: 289,
-      dagegen: 67
+      dafuer: 0,
+      dagegen: 0
     }
   },
   {
-    id: "4",
-    titel: "Erhöhung der Parkgebühren in der Innenstadt",
-    kurzfassung: "Die Parkgebühren in der Innenstadt sollen von 1€ auf 1,50€ pro Stunde erhöht werden.",
-    beschreibung: `Um den Parkraum in der Innenstadt besser zu bewirtschaften und Anreize für den Umstieg auf ÖPNV und Fahrrad zu schaffen, sollen die Parkgebühren angepasst werden.
+    id: "8",
+    titel: "Mehrfamilienhaus Landshuter Straße - Ablehnung",
+    kurzfassung: "Das gemeindliche Einvernehmen für ein Mehrfamilienhaus an der Landshuter Straße wurde verweigert.",
+    beschreibung: `Der Bauausschuss hat das gemeindliche Einvernehmen für diesen Vorbescheid verweigert.
 
-**Was ändert sich?**
-- Parkgebühr steigt von 1,00€ auf 1,50€ pro Stunde
-- Erste halbe Stunde bleibt kostenlos (für kurze Besorgungen)
-- Neue Fahrradstellplätze werden geschaffen
-- Busverbindungen in die Innenstadt werden verbessert
+**Geplantes Vorhaben:**
+- Neubau eines Mehrfamilienhauses mit überdachten Garagenstellplätzen
+- Aufstockung an der Landshuter Straße 6 und 8
 
-**Warum ist das wichtig?**
-- Mehr Parkplatzumschlag = mehr Verfügbarkeit für Kurzzeitparker
-- Einnahmen finanzieren besseren ÖPNV
-- Weniger Verkehr in der Innenstadt
-- Attraktivere Innenstadt für Fußgänger
-
-**Was bringt das ein?**
-Erwartete Mehreinnahmen: ca. 120.000€ pro Jahr
-Verwendung: 100% für ÖPNV-Verbesserung`,
-    kategorie: "verkehr",
+**Begründung der Ablehnung:**
+- Das Maß der baulichen Nutzung fügt sich nicht in die Umgebung ein
+- Gebäudehöhe und Geschossigkeit passen nicht zur bestehenden Bebauung
+- Die Umgebung ist von zweigeschossigen Baukörpern mit steilen Satteldächern geprägt`,
+    kategorie: "bau",
     status: "abgelehnt",
-    datum: "2024-10-18",
-    sitzung: "Stadtratssitzung Oktober 2024",
-    stadtteil: "Innenstadt",
+    datum: "2025-11-20",
+    sitzung: "Stadtratssitzung November 2025",
     abstimmung: {
-      dafuer: 8,
-      dagegen: 15,
-      abwesend: 2,
-      details: [
-        { partei: "CSU", dafuer: 2, dagegen: 8, abwesend: 1, farbe: "#0088CC" },
-        { partei: "SPD", dafuer: 2, dagegen: 3, abwesend: 0, farbe: "#E3000F" },
-        { partei: "Grüne", dafuer: 4, dagegen: 0, abwesend: 0, farbe: "#46962B" },
-        { partei: "FW", dafuer: 0, dagegen: 4, abwesend: 1, farbe: "#FF8800" },
-        { partei: "FDP", dafuer: 0, dagegen: 0, abwesend: 0, farbe: "#FFED00" },
-      ]
+      dafuer: 0,
+      dagegen: 11,
+      abwesend: 0,
+      details: []
     },
     timeline: [
-      { datum: "2024-08-01", ereignis: "Antrag von Grünen-Fraktion eingereicht" },
-      { datum: "2024-09-10", ereignis: "Kontroverse Diskussion im Verkehrsausschuss" },
-      { datum: "2024-10-18", ereignis: "Abstimmung im Stadtrat - Abgelehnt" },
+      { datum: "2025-11-20", ereignis: "Einvernehmen einstimmig verweigert" },
     ],
-    kommentare: [
-      {
-        id: "k6",
-        autor: "Einzelhändler M.",
-        text: "Gut, dass das abgelehnt wurde. Höhere Parkgebühren hätten noch mehr Kunden zu den großen Einkaufszentren getrieben.",
-        datum: "2024-10-19",
-        likes: 34
-      },
-      {
-        id: "k7",
-        autor: "Radfahrer2024",
-        text: "Schade, ich hätte mir gewünscht, dass die Einnahmen wirklich in bessere Radwege fließen.",
-        datum: "2024-10-19",
-        likes: 21
-      }
-    ],
+    kommentare: [],
     buergerAbstimmung: {
-      dafuer: 134,
-      dagegen: 298
+      dafuer: 0,
+      dagegen: 0
     }
   }
 ];
 
 export const naechsteSitzung = {
-  datum: "2024-12-13",
+  datum: "2026-02-19",
   uhrzeit: "19:00",
   ort: "Rathaus Moosburg, Großer Sitzungssaal",
   tagesordnung: [

@@ -1,0 +1,933 @@
+[
+  {
+    "antraege": [
+      {
+        "id": "crawled-1768775426613-0",
+        "titel": "Genehmigung der öffentlichen Niederschriften (StR 13.10.2025)",
+        "kurzfassung": "Die öffentlichen Niederschriften der Stadtratssitzung vom 13.10.2025 werden genehmigt.",
+        "beschreibung": "Der Stadtrat genehmigt die öffentlichen Niederschriften der Sitzung des Stadtrates vom 13.10.2025 ohne Gegenstimmen.",
+        "kategorie": "finanzen",
+        "status": "angenommen",
+        "datum": "2026-01-15",
+        "sitzung": "Stadtratssitzung Januar 2026",
+        "abstimmung": {
+          "dafuer": 22,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2026-01-15",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=63947&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775426613-1",
+        "titel": "Städtebauförderung; Beschluss über die Bedarfsanmeldung 2026",
+        "kurzfassung": "Die Stadt stellt einen Antrag auf Aufnahme in das Städtebauförderungsprogramm „Lebendige Zentren“ für 2026 und meldet entsprechende Kosten an.",
+        "beschreibung": "Der Stadtrat beschließt, für das Jahr 2026 einen Antrag auf Aufnahme in das Städtebauförderungsprogramm „Lebendige Zentren“ zu stellen. Die angemeldeten Kosten der beabsichtigten Vorhaben liegen für 2026 bei 505 Tsd. €. Der erforderliche Eigenanteil wird im Haushalt der Stadt bereitgestellt. Die vorgesehenen Vorhaben und Kosten sowie die Vorhaben in den Fortsetzungsjahren ergeben sich aus der Bedarfsmitteilung. Die Verwaltung wird beauftragt, die erforderlichen Unterlagen zusammenzustellen und rechtzeitig bei der Regierung von Oberbayern einzureichen.",
+        "kategorie": "bau",
+        "status": "angenommen",
+        "datum": "2026-01-15",
+        "sitzung": "Stadtratssitzung Januar 2026",
+        "abstimmung": {
+          "dafuer": 22,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2026-01-15",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=63947&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775426613-2",
+        "titel": "Antrag von Drittem Bürgermeister Dr. Stanglmaier, dem Bündnis 90/DIE GRÜNEN sowie Eltern der Theresia-Gerhardinger-Grundschule auf „Sichere Straßen für alle – verkehrssichere Industriestraße“ – Beschluss 1",
+        "kurzfassung": "Der Gehweg an der Industriestraße zwischen Driescherstraße und Graf-Konrad-Straße wird mit mindestens 2,00 m Breite ausgebaut.",
+        "beschreibung": "Der Stadtrat beschließt den Ausbau des Gehwegs an der Industriestraße von der Driescherstraße bis zur Graf-Konrad-Straße. Der Gehweg soll eine durchgängige Breite von mindestens 2,00 m erhalten.",
+        "kategorie": "verkehr",
+        "status": "angenommen",
+        "datum": "2026-01-15",
+        "sitzung": "Stadtratssitzung Januar 2026",
+        "abstimmung": {
+          "dafuer": 21,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2026-01-15",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=63947&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775426613-3",
+        "titel": "Antrag von Drittem Bürgermeister Dr. Stanglmaier, dem Bündnis 90/DIE GRÜNEN sowie Eltern der Theresia-Gerhardinger-Grundschule auf „Sichere Straßen für alle – verkehrssichere Industriestraße“ – Beschluss 2 (Fahrradschutzstreifen)",
+        "kurzfassung": "Ein Fahrradschutzstreifen an der Industriestraße wird für ein Jahr probeweise markiert.",
+        "beschreibung": "Der Stadtrat beschließt, auf der rechten Seite der Industriestraße beginnend in Höhe der Einmündung zur Driescherstraße bis zur Gutenbergstraße einen Fahrradschutzstreifen probeweise für ein Jahr anzubringen. Nach Ablauf des Jahres werden die gesammelten Erfahrungen dem Stadtrat zur weiteren Entscheidung vorgelegt.",
+        "kategorie": "verkehr",
+        "status": "angenommen",
+        "datum": "2026-01-15",
+        "sitzung": "Stadtratssitzung Januar 2026",
+        "abstimmung": {
+          "dafuer": 14,
+          "dagegen": 8,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2026-01-15",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=63947&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775426613-4",
+        "titel": "Antrag von Drittem Bürgermeister Dr. Stanglmaier, dem Bündnis 90/DIE GRÜNEN sowie Eltern der Theresia-Gerhardinger-Grundschule auf „Sichere Straßen für alle – verkehrssichere Industriestraße“ – Beschluss 3 (Fahrrad-Piktogramm-Kette)",
+        "kurzfassung": "Eine Fahrrad-Piktogramm-Kette an der Industriestraße wird für ein Jahr probeweise markiert.",
+        "beschreibung": "Der Stadtrat beschließt, eine Fahrrad-Piktogramm-Kette beginnend ab der Einmündung zur Gutenbergstraße bis zur Steinbockstraße rechtsseitig und ab der Steinbockstraße linksseitig bis zum Einmündungsbereich der Driescherstraße probeweise für ein Jahr anzubringen. Nach Ablauf des Jahres werden die gesammelten Erfahrungen dem Stadtrat zur weiteren Entscheidung vorgelegt.",
+        "kategorie": "verkehr",
+        "status": "angenommen",
+        "datum": "2026-01-15",
+        "sitzung": "Stadtratssitzung Januar 2026",
+        "abstimmung": {
+          "dafuer": 22,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2026-01-15",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=63947&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775426613-5",
+        "titel": "Antrag von Drittem Bürgermeister Dr. Stanglmaier, dem Bündnis 90/DIE GRÜNEN sowie Eltern der Theresia-Gerhardinger-Grundschule auf „Sichere Straßen für alle – verkehrssichere Industriestraße“ – Beschluss 4 (Ampelschaltung)",
+        "kurzfassung": "Die Ampelschaltung Thalbacher Straße / Industriestraße wird so umprogrammiert, dass beide Fußgängerfurten gleichzeitig Grün haben.",
+        "beschreibung": "Der Stadtrat beschließt die Umprogrammierung der Ampelschaltung an der Kreuzung Thalbacher Straße / Industriestraße. Beide Fußgängerfurten von der Industriestraße bis zum Gehweg beim Netto sollen zur gleichen Zeit eine Grünphase erhalten.",
+        "kategorie": "verkehr",
+        "status": "angenommen",
+        "datum": "2026-01-15",
+        "sitzung": "Stadtratssitzung Januar 2026",
+        "abstimmung": {
+          "dafuer": 22,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2026-01-15",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=63947&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775426613-6",
+        "titel": "Einziehung eines Teilabschnitts des öffentlichen Feld- und Waldwegs Nr. 16 „Degernpointweg I“",
+        "kurzfassung": "Für den Feld- und Waldweg Nr. 16 „Degernpointweg I“ wird ein Teileinziehungsverfahren für einen ca. 80 m langen Abschnitt eingeleitet.",
+        "beschreibung": "Der Stadtrat stimmt der Einleitung eines Teileinziehungsverfahrens des öffentlichen Feld- und Waldwegs Nr. 16 „Degernpointweg I“ aus der Fl.Nr.: 1034/2 Gemarkung Pfrombach auf einer Länge von ca. 80 m zu.",
+        "kategorie": "verkehr",
+        "status": "angenommen",
+        "datum": "2026-01-15",
+        "sitzung": "Stadtratssitzung Januar 2026",
+        "abstimmung": {
+          "dafuer": 22,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2026-01-15",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=63947&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775426613-7",
+        "titel": "Beschluss zur Bereitstellung einer zusätzlichen Stelle im Stellenplan 2026 zur Wirtschaftsförderung – Beschluss 1",
+        "kurzfassung": "Im Stellenplan 2026 wird eine zusätzliche Vollzeitstelle eines Wirtschaftsförderers geschaffen.",
+        "beschreibung": "Der Stadtrat beschließt, im Stellenplan 2026 die zusätzliche Vollzeitstelle eines Wirtschaftsförderers zu schaffen. Die Eingruppierung erfolgt nach Stellenbeschreibung gemäß Tarifrecht.",
+        "kategorie": "finanzen",
+        "status": "angenommen",
+        "datum": "2026-01-15",
+        "sitzung": "Stadtratssitzung Januar 2026",
+        "abstimmung": {
+          "dafuer": 16,
+          "dagegen": 6,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2026-01-15",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=63947&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775426613-8",
+        "titel": "Beschluss zur Bereitstellung einer zusätzlichen Stelle im Stellenplan 2026 zur Wirtschaftsförderung – Beschluss 2",
+        "kurzfassung": "Im Verwaltungshaushalt 2026 werden 30.000 € als Budget für die Wirtschaftsförderung und zur Förderung von Start-Up-Unternehmen aufgenommen.",
+        "beschreibung": "Der Stadtrat beschließt, im Verwaltungshaushalt 2026 30.000 € als Budget für die Wirtschaftsförderung sowie zur Förderung von Start-Up-Unternehmen mitaufzunehmen.",
+        "kategorie": "finanzen",
+        "status": "angenommen",
+        "datum": "2026-01-15",
+        "sitzung": "Stadtratssitzung Januar 2026",
+        "abstimmung": {
+          "dafuer": 17,
+          "dagegen": 5,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2026-01-15",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=63947&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775426613-9",
+        "titel": "Beschluss über die Bereitstellung von Haushaltsmitteln für über- und außerplanmäßige Ausgaben im Haushalt 2025",
+        "kurzfassung": "Über- und außerplanmäßige Ausgaben 2025 sowie entsprechende Mittelverschiebungen werden genehmigt.",
+        "beschreibung": "Der Stadtrat genehmigt die über- und außerplanmäßigen Ausgaben sowie die Mittelverschiebung zu deren Deckung, da die Ausgaben unabweisbar sind. Konkret werden mehrere Beträge auf verschiedenen Haushaltsstellen bereitgestellt und jeweils durch andere Haushaltsstellen gedeckt, wie im Protokoll im Einzelnen aufgeführt.",
+        "kategorie": "finanzen",
+        "status": "angenommen",
+        "datum": "2026-01-15",
+        "sitzung": "Stadtratssitzung Januar 2026",
+        "abstimmung": {
+          "dafuer": 22,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2026-01-15",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=63947&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775437496-0",
+        "titel": "Genehmigung der öffentlichen Niederschriften (StR-Sitzung 08.09.2025, StR-Sitzung 22.09.2025)",
+        "kurzfassung": "Die öffentlichen Niederschriften der Stadtratssitzungen vom 08.09.2025 und 22.09.2025 wurden genehmigt.",
+        "beschreibung": "Der Stadtrat genehmigt die öffentlichen Niederschriften der Stadtratssitzungen vom 08.09.2025 und 22.09.2025 ohne Gegenstimmen.",
+        "kategorie": "finanzen",
+        "status": "angenommen",
+        "datum": "2025-12-18",
+        "sitzung": "Stadtratssitzung Dezember 2025",
+        "abstimmung": {
+          "dafuer": 20,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-12-18",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=63517&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775437496-1",
+        "titel": "Änderung der Satzung über die Erhebung von Gebühren für Sondernutzungen an öffentlichem Verkehrsraum der Stadt Moosburg (Antrag Freie Wähler)",
+        "kurzfassung": "Die Satzung über Gebühren für Sondernutzungen am öffentlichen Verkehrsraum wurde geändert, inklusive Abrechnung nach Quadratmetern und spezifischen Gebühren für Bauzaunbanner.",
+        "beschreibung": "Der Stadtrat beschließt die Änderung der Satzung über die Erhebung von Gebühren für Sondernutzungen an öffentlichem Verkehrsraum samt Anlage (Sondernutzungsgebührenverzeichnis) in der vorliegenden Fassung mit Abrechnung nach Quadratmetern. Bei gewerblichen Bauzaunbannern werden 10 € je angefangener Woche, bei nichtgewerblichen Bauzaunbannern 5 € je angefangener Woche abgerechnet.",
+        "kategorie": "finanzen",
+        "status": "angenommen",
+        "datum": "2025-12-18",
+        "sitzung": "Stadtratssitzung Dezember 2025",
+        "abstimmung": {
+          "dafuer": 20,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-12-18",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=63517&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775437496-2",
+        "titel": "Beschluss über den Antrag zur Einführung von Tariftreue bei der Vergabe von öffentlichen Aufträgen (Antrag StR Strobl/Die Linke, Kreisverband Freising)",
+        "kurzfassung": "Die Stadt führt keine verpflichtende Tariftreue für alle öffentlichen Aufträge ein, ergänzt aber einen Hinweis zur Einhaltung tarifvertraglicher Regelungen in künftigen Ausschreibungen.",
+        "beschreibung": "Die Stadt Moosburg sieht derzeit von einer verpflichtenden Einführung von Tariftreueregelungen für alle öffentlichen Aufträge der Stadt Moosburg ab. In künftigen Ausschreibungen wird folgender Satz ergänzt: Der Auftragnehmer hat bei der Ausführung des Auftrags alle für ihn geltenden tarifvertraglichen Regelungen einzuhalten.",
+        "kategorie": "finanzen",
+        "status": "angenommen",
+        "datum": "2025-12-18",
+        "sitzung": "Stadtratssitzung Dezember 2025",
+        "abstimmung": {
+          "dafuer": 18,
+          "dagegen": 3,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-12-18",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=63517&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775437496-3",
+        "titel": "Antrag zur Verhinderung des Baus und Betriebs eines Abschiebeterminals am Flughafen München (Antrag StR Strobl/Die Linke)",
+        "kurzfassung": "Der Antrag zur Verhinderung des Baus und Betriebs eines Abschiebeterminals am Flughafen München wurde zurückgezogen.",
+        "beschreibung": "Der unter Tagesordnungspunkt 4.3 geführte Antrag zur Verhinderung des Baus und Betriebs eines Abschiebeterminals am Flughafen München wurde zurückgezogen.",
+        "kategorie": "soziales",
+        "status": "in-beratung",
+        "datum": "2025-12-18",
+        "sitzung": "Stadtratssitzung Dezember 2025",
+        "abstimmung": {
+          "dafuer": 0,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-12-18",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=63517&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775437496-4",
+        "titel": "Antrag zur Gewährung einer Zulage für Bauhofmitarbeitende (Antrag StR Strobl/Die Linke)",
+        "kurzfassung": "Der Antrag zur Gewährung einer Zulage für Bauhofmitarbeitende wurde zurückgezogen.",
+        "beschreibung": "Der unter Tagesordnungspunkt 4.4 geführte Antrag zur Gewährung einer Zulage für Bauhofmitarbeitende wurde zurückgezogen.",
+        "kategorie": "finanzen",
+        "status": "in-beratung",
+        "datum": "2025-12-18",
+        "sitzung": "Stadtratssitzung Dezember 2025",
+        "abstimmung": {
+          "dafuer": 0,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-12-18",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=63517&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775456932-0",
+        "titel": "Genehmigung der öffentlichen Niederschrift der Sitzung des Bau-, Planungs- u. Umweltausschusses v. 21.07.2025",
+        "kurzfassung": "Der Bauausschuss nimmt den öffentlichen Teil der Niederschrift vom 21.07.2025 zur Kenntnis und genehmigt die Niederschrift.",
+        "beschreibung": "Der Bau-, Planungs- und Umweltausschuss stellt fest, dass der öffentliche Teil der Niederschrift der Sitzung vom 21.07.2025 zur Kenntnis genommen wurde und genehmigt diese Niederschrift formell.",
+        "kategorie": "bau",
+        "status": "angenommen",
+        "datum": "2025-11-20",
+        "sitzung": "Stadtratssitzung November 2025",
+        "abstimmung": {
+          "dafuer": 11,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-11-20",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62896&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775456932-1",
+        "titel": "Neubau einer landwirtschaftl. Lagerhalle a.d. Kochbauerstr. 1, Moosburg-Aich",
+        "kurzfassung": "Der Bauausschuss erteilt zum beantragten Vorhaben das gemeindliche Einvernehmen.",
+        "beschreibung": "Für den Neubau einer landwirtschaftlichen Lagerhalle an der Kochbauerstraße 1 in Moosburg-Aich wird das gemeindliche Einvernehmen durch den Bauausschuss erteilt.",
+        "kategorie": "bau",
+        "status": "angenommen",
+        "datum": "2025-11-20",
+        "sitzung": "Stadtratssitzung November 2025",
+        "abstimmung": {
+          "dafuer": 11,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-11-20",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62896&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775456932-2",
+        "titel": "Vorbescheid - Neubau e. Mehrfamilienhauses mit überdachten Garagenstellplätzen und Aufstockung a.d. Landshuter Str. 6 und 8, Moosburg – Beschluss 1",
+        "kurzfassung": "Der Bauausschuss verweigert zum beantragten Vorbescheid das gemeindliche Einvernehmen.",
+        "beschreibung": "Zum Vorbescheid für den Neubau eines Mehrfamilienhauses mit überdachten Garagenstellplätzen und Aufstockung an der Landshuter Straße 6 und 8 in Moosburg verweigert der Bauausschuss das gemeindliche Einvernehmen. Begründet wird dies damit, dass sich das Maß der baulichen Nutzung bezüglich äußerlich wahrnehmbarer Kriterien wie Gebäudehöhe und Geschossigkeit nicht in die Umgebung einfügt und die bestehende Bebauung stadteinwärts von zweigeschossigen Baukörpern mit steilen Satteldächern geprägt ist.",
+        "kategorie": "bau",
+        "status": "abgelehnt",
+        "datum": "2025-11-20",
+        "sitzung": "Stadtratssitzung November 2025",
+        "abstimmung": {
+          "dafuer": 11,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-11-20",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62896&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775456932-3",
+        "titel": "Vorbescheid - Neubau e. Mehrfamilienhauses mit überdachten Garagenstellplätzen und Aufstockung a.d. Landshuter Str. 6 und 8, Moosburg – Beschluss 2",
+        "kurzfassung": "Der Bauausschuss stellt fest, dass das Baugrundstück im Sanierungsgebiet „Historischer Stadtkern“ liegt und das Vorhaben den Zielen und Zwecken der Satzung nicht entspricht.",
+        "beschreibung": "Der Bauausschuss stellt fest, dass sich das Baugrundstück im Geltungsbereich des Sanierungsgebietes „Historischer Stadtkern“ befindet. Das geplante Bauvorhaben entspricht dabei in vielen Dingen, insbesondere hinsichtlich Ortsbild, Baugefüge und Nutzungsvielfalt, nicht den Zielen und Zwecken dieser Satzung.",
+        "kategorie": "bau",
+        "status": "angenommen",
+        "datum": "2025-11-20",
+        "sitzung": "Stadtratssitzung November 2025",
+        "abstimmung": {
+          "dafuer": 11,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-11-20",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62896&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775456932-4",
+        "titel": "Neubau e. Mehrfamilienhauses mit 9 Wohneinh.a.d. Sudetenlandstr. 28, Moosburg – Beschluss 1",
+        "kurzfassung": "Der Bauausschuss erteilt zum beantragten Vorhaben das gemeindliche Einvernehmen.",
+        "beschreibung": "Für den Neubau eines Mehrfamilienhauses mit 9 Wohneinheiten an der Sudetenlandstraße 28 in Moosburg erteilt der Bauausschuss im ersten Beschluss das gemeindliche Einvernehmen.",
+        "kategorie": "bau",
+        "status": "angenommen",
+        "datum": "2025-11-20",
+        "sitzung": "Stadtratssitzung November 2025",
+        "abstimmung": {
+          "dafuer": 5,
+          "dagegen": 6,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-11-20",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62896&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775456932-5",
+        "titel": "Neubau e. Mehrfamilienhauses mit 9 Wohneinh.a.d. Sudetenlandstr. 28, Moosburg – Beschluss 2",
+        "kurzfassung": "Der Bauausschuss verweigert zum beantragten Vorhaben das gemeindliche Einvernehmen, da Baulinie und Maß der baulichen Nutzung nicht passen.",
+        "beschreibung": "Im zweiten Beschluss zum Neubau eines Mehrfamilienhauses mit 9 Wohneinheiten an der Sudetenlandstraße 28 verweigert der Bauausschuss das gemeindliche Einvernehmen. Begründet wird dies damit, dass die Baulinie verlassen wird und sich das Maß der baulichen Nutzung nicht in die nähere Umgebungsbebauung einfügt.",
+        "kategorie": "bau",
+        "status": "abgelehnt",
+        "datum": "2025-11-20",
+        "sitzung": "Stadtratssitzung November 2025",
+        "abstimmung": {
+          "dafuer": 6,
+          "dagegen": 5,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-11-20",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62896&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775456932-6",
+        "titel": "Neubau e. landwirtschaftlichen Lagerhalle in Kirchamper 8, Moosburg",
+        "kurzfassung": "Der Bauausschuss erteilt zum beantragten Vorhaben das gemeindliche Einvernehmen.",
+        "beschreibung": "Für den Neubau einer landwirtschaftlichen Lagerhalle in Kirchamper 8 in Moosburg erteilt der Bauausschuss das gemeindliche Einvernehmen.",
+        "kategorie": "bau",
+        "status": "angenommen",
+        "datum": "2025-11-20",
+        "sitzung": "Stadtratssitzung November 2025",
+        "abstimmung": {
+          "dafuer": 11,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-11-20",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62896&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775456932-7",
+        "titel": "Errichtung eines Stadthotels am Weingraben 14, Moosburg",
+        "kurzfassung": "Der Bauausschuss erteilt zum beantragten Vorhaben das gemeindliche Einvernehmen.",
+        "beschreibung": "Für die Errichtung eines Stadthotels am Weingraben 14 in Moosburg erteilt der Bauausschuss das gemeindliche Einvernehmen.",
+        "kategorie": "bau",
+        "status": "angenommen",
+        "datum": "2025-11-20",
+        "sitzung": "Stadtratssitzung November 2025",
+        "abstimmung": {
+          "dafuer": 11,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-11-20",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62896&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775456932-8",
+        "titel": "Neubau e. Mehrfamilienhauses (8 WE) mit Tiefgarage auf dem Grundstück Fl. Nr. 804, Gemarkung Moosburg - Mainburger Str. 5; LRA-Schreiben v. 19.09.2025 zwecks Ersetzung des gemeindl. Einvernehmens dr. das LRA",
+        "kurzfassung": "Der Bauausschuss verweigert zum beantragten Vorhaben das gemeindliche Einvernehmen.",
+        "beschreibung": "Zum Neubau eines Mehrfamilienhauses mit 8 Wohneinheiten und Tiefgarage auf dem Grundstück Flurstück Nr. 804, Gemarkung Moosburg, Mainburger Straße 5, verweigert der Bauausschuss das gemeindliche Einvernehmen. Er stellt fest, dass sich das Maß der baulichen Nutzung, insbesondere die tatsächliche überbaute Grundfläche gemäß § 19 Abs. 4 BauNVO, nicht in die Eigenart der näheren Umgebung einfügt.",
+        "kategorie": "bau",
+        "status": "abgelehnt",
+        "datum": "2025-11-20",
+        "sitzung": "Stadtratssitzung November 2025",
+        "abstimmung": {
+          "dafuer": 11,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-11-20",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62896&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775476122-0",
+        "titel": "Genehmigung der öffentlichen Niederschriften (StR 12.05.2025; StR 02.06.2025)",
+        "kurzfassung": "Die öffentlichen Niederschriften der Stadtratssitzungen vom 12.05.2025 und 02.06.2025 werden genehmigt.",
+        "beschreibung": "Der Stadtrat genehmigt die öffentlichen Niederschriften der Sitzungen vom 12.05.2025 und 02.06.2025 ohne Gegenstimmen.",
+        "kategorie": "finanzen",
+        "status": "angenommen",
+        "datum": "2025-10-16",
+        "sitzung": "Stadtratssitzung Oktober 2025",
+        "abstimmung": {
+          "dafuer": 20,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-10-16",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62643&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775476122-1",
+        "titel": "Sanierungsgebiet \"Zwischen Innenstadt und Bahnhof\"; Beschlüsse zum Verfahren (Beschlussfassung auf 8. September verschoben)",
+        "kurzfassung": "Die Beschlussfassung zum Verfahren im Sanierungsgebiet \"Zwischen Innenstadt und Bahnhof\" wird verschoben.",
+        "beschreibung": "Der Tagesordnungspunkt zum Sanierungsgebiet \"Zwischen Innenstadt und Bahnhof\" wird zurückgestellt; die Beschlussfassung ist auf den 8. September verschoben.",
+        "kategorie": "bau",
+        "status": "vertagt",
+        "datum": "2025-10-16",
+        "sitzung": "Stadtratssitzung Oktober 2025",
+        "abstimmung": {
+          "dafuer": 0,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-10-16",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62643&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775476122-2",
+        "titel": "Erweiterung Theresia-Gerhardinger-Grundschule mit Ganztagesbetreuungseinrichtung, Albinstraße 14, 85368 Moosburg an der Isar, - Vorstellung und Entscheidungen zur Kostenberechnung – Prüfung zentrale Klimatisierung",
+        "kurzfassung": "Die Fachplaner sollen die Kosten für eine zentrale Klimatisierung prüfen und dem Stadtrat zur Entscheidung vorlegen.",
+        "beschreibung": "Der Stadtrat beauftragt die Fachplaner, die Kosten für eine zentrale Klimatisierung der Erweiterung der Theresia-Gerhardinger-Grundschule zu prüfen und dem Stadtrat bei nächster Gelegenheit zur Entscheidung vorzulegen. Der zugehörige Beschlussvorschlag wird mit 10:13 Stimmen abgelehnt.",
+        "kategorie": "bau",
+        "status": "abgelehnt",
+        "datum": "2025-10-16",
+        "sitzung": "Stadtratssitzung Oktober 2025",
+        "abstimmung": {
+          "dafuer": 10,
+          "dagegen": 13,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-10-16",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62643&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775476122-3",
+        "titel": "Erweiterung Theresia-Gerhardinger-Grundschule – Einsparung Dachbegrünung",
+        "kurzfassung": "Der Vorschlag, die Dachbegrünung einzusparen, wird abgelehnt.",
+        "beschreibung": "Zum Projekt der Erweiterung der Theresia-Gerhardinger-Grundschule beschließt der Stadtrat, die Dachbegrünung nicht einzusparen. Der Antrag, die Dachbegrünung einzusparen, wird mit 5:18 Stimmen abgelehnt.",
+        "kategorie": "bau",
+        "status": "abgelehnt",
+        "datum": "2025-10-16",
+        "sitzung": "Stadtratssitzung Oktober 2025",
+        "abstimmung": {
+          "dafuer": 5,
+          "dagegen": 18,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-10-16",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62643&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775476122-4",
+        "titel": "Erweiterung Theresia-Gerhardinger-Grundschule – Weiterplanung mit vorgestellter Tiefgarage",
+        "kurzfassung": "Die Weiterplanung mit der vorgestellten Tiefgarage wird beschlossen.",
+        "beschreibung": "Im Rahmen der Erweiterung der Theresia-Gerhardinger-Grundschule beschließt der Stadtrat, mit der vorgestellten Tiefgarage weiter zu planen. Der Beschluss erfolgt einstimmig mit 23:0 Stimmen.",
+        "kategorie": "bau",
+        "status": "angenommen",
+        "datum": "2025-10-16",
+        "sitzung": "Stadtratssitzung Oktober 2025",
+        "abstimmung": {
+          "dafuer": 23,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-10-16",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62643&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775476122-5",
+        "titel": "Erweiterung Theresia-Gerhardinger-Grundschule – Weiterverfolgung „Campus-Vernetzung“ – Variante 2",
+        "kurzfassung": "Die vorgestellte „Campus-Vernetzung“ – Variante 2 wird weiterverfolgt.",
+        "beschreibung": "Der Stadtrat beschließt zur Erweiterung der Theresia-Gerhardinger-Grundschule, die vorgestellte „Campus-Vernetzung“ – Variante 2 weiter zu verfolgen. Der Beschluss wird mit 21:2 Stimmen gefasst.",
+        "kategorie": "bau",
+        "status": "angenommen",
+        "datum": "2025-10-16",
+        "sitzung": "Stadtratssitzung Oktober 2025",
+        "abstimmung": {
+          "dafuer": 21,
+          "dagegen": 2,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-10-16",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62643&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775476122-6",
+        "titel": "Erweiterung Theresia-Gerhardinger-Grundschule – Streichung der vorgestellten Bühnentechnik aus der Planung",
+        "kurzfassung": "Die vorgestellte Bühnentechnik wird aus der Planung gestrichen.",
+        "beschreibung": "Im Zuge der Planung der Erweiterung der Theresia-Gerhardinger-Grundschule beschließt der Stadtrat, die vorgestellte Bühnentechnik aus der Planung zu streichen. Der Beschluss erfolgt einstimmig mit 23:0 Stimmen.",
+        "kategorie": "bau",
+        "status": "angenommen",
+        "datum": "2025-10-16",
+        "sitzung": "Stadtratssitzung Oktober 2025",
+        "abstimmung": {
+          "dafuer": 23,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-10-16",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62643&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775476122-7",
+        "titel": "Erweiterung Theresia-Gerhardinger-Grundschule – Gesamtbeschluss zur vorgestellten Planung und Förderanträgen",
+        "kurzfassung": "Die vorgestellte Planung wird zustimmend zur Kenntnis genommen, Einsparmöglichkeiten werden weiter geprüft und die Verwaltung zur Erstellung der Förderanträge ermächtigt.",
+        "beschreibung": "Der Stadtrat nimmt die vorgestellte Planung für die Erweiterung der Theresia-Gerhardinger-Grundschule zustimmend zur Kenntnis. Weitere Einsparmöglichkeiten, vor allem im Küchenbereich, werden noch geprüft. Die Verwaltung wird ermächtigt, in Zusammenarbeit mit den Planern, den oder die Förderanträge auf Grundlage der vorgestellten qualifizierten Kostenschätzung und des Entwurfs zu erstellen. Weitere Entscheidungen erfolgen nach Vorliegen des Förderbescheides durch die Regierung von Oberbayern. Der Beschluss wird mit 23 Ja-Stimmen und 0 Nein-Stimmen gefasst.",
+        "kategorie": "bau",
+        "status": "angenommen",
+        "datum": "2025-10-16",
+        "sitzung": "Stadtratssitzung Oktober 2025",
+        "abstimmung": {
+          "dafuer": 23,
+          "dagegen": 0,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-10-16",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62643&type=do&smcmode=32832"
+      },
+      {
+        "id": "crawled-1768775476122-8",
+        "titel": "Parkplatz Alte Polizei; Kostengünstige Sanierung der Platzfläche",
+        "kurzfassung": "Die Sanierung des Parkplatzes „Alte Polizei“ mit einem Bruttobetrag von 45.000 € wird beauftragt und im Juli 2025 durchgeführt.",
+        "beschreibung": "Der Stadtrat beschließt, die Sanierung des Parkplatzes „Alte Polizei“ mit einem Betrag in Höhe von 45.000 € (Brutto) zu beauftragen. Die Maßnahme wird im Juli 2025 durchgeführt. Der Beschluss wird mit 19 Ja-Stimmen und 3 Nein-Stimmen gefasst. Es wird vermerkt, dass der Dritte Bürgermeister Stanglmaier aufgrund kurzfristiger Abwesenheit nicht an der Abstimmung beteiligt war.",
+        "kategorie": "bau",
+        "status": "angenommen",
+        "datum": "2025-10-16",
+        "sitzung": "Stadtratssitzung Oktober 2025",
+        "abstimmung": {
+          "dafuer": 19,
+          "dagegen": 3,
+          "abwesend": 0,
+          "details": []
+        },
+        "timeline": [
+          {
+            "datum": "2025-10-16",
+            "ereignis": "Beschluss im Stadtrat"
+          }
+        ],
+        "kommentare": [],
+        "buergerAbstimmung": {
+          "dafuer": 0,
+          "dagegen": 0
+        },
+        "quelleUrl": "https://buergerinfo-moosburg.digitalfabrix.de/getfile.asp?id=62643&type=do&smcmode=32832"
+      }
+    ],
+    "count": 33,
+    "fehlerOderLeer": [],
+    "crawledAt": "2026-01-18T22:31:16.150Z"
+  }
+]
