@@ -1,0 +1,1 @@
+pandoc Gruppe_A_Semester_Documentation.md --standalone --pdf-engine=xelatex --toc --toc-depth=2 -V geometry:margin=1in -o Gruppe_A_Semester_Documentation.pdf

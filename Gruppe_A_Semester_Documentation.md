@@ -1,3 +1,12 @@
+---
+title: "Semesterdokumentation (Gruppe A)"
+author: "Nicholas Iliou, Moritz Finkel, Jonas Groh"
+date: "2026-01-18"
+lang: "de"
+toc: true
+toc-depth: 2
+---
+
 # Semesterdokumentation (Gruppe A)
 
 **Projekt:** *Moosburg Transparent / Rat erklärt* (Civic-Tech-Prototyp)
@@ -18,9 +27,10 @@ Wir bauen eine mobile, leicht verständliche Plattform, die Ratsanträge **auffi
 
 ### Was wir am Ende hatten
 - Einen lauffähigen Prototyp (Next.js) mit Antragsübersicht, Detailseiten, Filtern, Abstimmungsvisualisierung, Bürger-Voting und Kartenansicht.
+- Deployment so, dass Testing realistisch möglich ist (Cloudflare Workers via OpenNext).
 - Usability-Testing (SUS + Aufgaben) mit sehr guter Basis-Usability (SUS ~85), aber klaren Hebeln zur Verbesserung.
 
-**Link zum Prototyp (wie in den Abgaben referenziert):** `mvpservicedesign.moo-finkel.workers.dev`
+**Link zum Prototyp (wie in den Abgaben referenziert):** https://mvpservicedesign.moo-finkel.workers.dev/
 
 ---
 
@@ -31,6 +41,8 @@ Im bestehenden Moosburger Portal sind Sitzungsinfos zwar grundsätzlich vorhande
 - **zu spät** bzw. nicht verlässlich aktuell (Beispiel: Niederschriften teils Monate alt),
 - **nicht intuitiv** auffindbar (für Protokolle sind Seitenwechsel/Strukturwissen nötig),
 - **zu formal** formuliert (Amtssprache statt „Worum geht’s in 20 Sekunden?“).
+
+Referenz (Status quo): https://www.moosburg.de/buergerinfo-portal-2
 
 ### Priorisierte Pain Points (aus Beobachtung + Artefakten)
 
@@ -128,7 +140,7 @@ Unser frühes „Mikrofon → KI-Transkript → Protokoll“-Konzept war attrakt
 ### Das Service-Konzept in 3 Bausteinen
 1. **Erklären (Verständlichkeit):** Kurzfassung + strukturierte Detailansicht („Was bedeutet das konkret?“)
 2. **Navigieren (Auffindbarkeit):** Suche/Filter + klare Kategorien + Stadtteilbezug
-3. **Vertrauen (Transparenz):** Abstimmungsergebnisse visualisieren + optional: Link zu Originalunterlagen
+3. **Vertrauen (Transparenz):** Abstimmungsergebnisse visualisieren + Link zur offiziellen Quelle (Bürgerinfo-Portal) und perspektivisch: Originalunterlagen
 
 **Abbildung 9: Aktivitäts-/Prozesssicht (wie Nutzer:innen durch den Service laufen)**
 
@@ -148,6 +160,11 @@ Artefakte: Journey- und Strukturmodelle (Abbildungen 4–6) sowie erste Struktur
 
 ### Mid‑Fi / Click‑Dummy (Ziel: echte Interaktion testbar machen)
 Wir sind bewusst relativ früh in einen lauffähigen Click-Dummy gegangen, weil Filter/Navigation und Detailseiten **nur in Interaktion** sinnvoll testbar waren.
+
+**Technische Umsetzung (bewusst „so echt wie nötig“):**
+- Next.js/React/TypeScript, damit wir echte Navigation, Filterzustände und Detailseiten testen können.
+- Kernrouten: Antragsliste, Antrag-Detail, Karte und Feedback (für die Testerhebung).
+- Hosting auf Cloudflare Workers (OpenNext), damit Teilnehmende ohne Setup-Hürden testen können.
 
 **Mid‑Fi-Lernziele:**
 - Task Success bei „Tempo 30 finden“
@@ -171,6 +188,12 @@ Wir sind bewusst relativ früh in einen lauffähigen Click-Dummy gegangen, weil 
 - **Remote, unmoderiert** (realistischer Nutzungskontext, weniger „Testleiter-Effekt“)
 - **Methodenmix:** SUS + Aufgabenanalyse (7 Tasks)
 
+### Datenerhebung im Prototyp (warum und wie)
+- Wir haben die Rückmeldungen direkt im Prototyp gesammelt (Route „Feedback“), um Abbrüche durch externe Tools zu reduzieren.
+- SUS wurde im Formular abgefragt und als Score (0–100) ausgewertet; zusätzlich gab es Freitext pro Aufgabe.
+- Versand/Export der Daten erfolgte über einen externen Form-Endpunkt (Formspree), damit keine eigene Backend-Infrastruktur nötig ist.
+- Bei Übertragungsfehlern werden Eingaben zwischengespeichert, damit Testdaten nicht verloren gehen.
+
 ### Was wir gemessen/gesammelt haben
 - SUS-Score (0–100)
 - Offenes Feedback pro Aufgabe
@@ -179,6 +202,8 @@ Wir sind bewusst relativ früh in einen lauffähigen Click-Dummy gegangen, weil 
 ### Ergebnisse (kurz)
 - **SUS ≈ 85 (Exzellent)**
 - Kernaufgaben (Antrag finden, Filter nutzen, Details verstehen) funktionieren für die Testgruppe gut.
+
+Stichprobe/Transparenz: Wir haben mit einer kleineren frühen Runde begonnen und später erweitert; die SUS-Tendenz blieb in beiden Auswertungsständen im Bereich „exzellent“ (≈85).
 
 ### Die unbequemen Learnings (das ist der Teil, der uns wirklich weitergebracht hat)
 1. **Unsere Kartenannahme war zu optimistisch.**
@@ -225,20 +250,3 @@ Wir sind bewusst relativ früh in einen lauffähigen Click-Dummy gegangen, weil 
 - **Features brauchen Nutzenbeweis.** Eine Karte ist nur dann gut, wenn sie eine Frage schneller beantwortet als Liste/Filter.
 
 ---
-
-## 10. Anhang: Bildübersicht (alles im Repo, sprechende Dateinamen)
-
-**Kontext/Research:**
-- Stakeholder Map, Personas, User Insights, Ist/Soll Journey
-
-**Ideation/Synthese:**
-- 28 Ideen, How Might We, User Journey Wheel
-
-**Flows/Struktur:**
-- Activity Diagram, Online Journey, Visit Ablauf
-
-**Weitere Visuals (optional im Vortrag / PDF):**
-
-![Color Concept](images/colorconcept.png)
-
-![New Concept](images/new_concept.png)
